@@ -1,0 +1,33 @@
+/* Custom Rating Styles */
+.form__stars ion-icon {
+    font-size: 40px;
+    color: #ff55a5;
+    cursor: pointer;
+    transition: 0.2s ease;
+    margin-right: 2px;
+}
+
+.form__stars ion-icon:hover,
+.form__stars ion-icon.active {
+    color: #ff5860;
+}
+
+.form__emojis {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.form__emojis span {
+    font-size: 32px;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: 0.3s ease;
+    user-select: none;
+}
+
+.form__emojis span:hover,
+.form__emojis span.active {
+    filter: grayscale(0%);
+    transform: scale(1.2);
+}

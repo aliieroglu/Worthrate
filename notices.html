@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="css/nouislider.min.css">
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/plyr.css">
+	<link rel="stylesheet" href="css/photoswipe.css">
+	<link rel="stylesheet" href="css/default-skin.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/modal_custom.css">
+
+	<!-- Favicons -->
+	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
+	<link rel="apple-touch-icon" href="icon/favicon-32x32.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="icon/apple-touch-icon-144x144.png">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Dmitry Volkov">
+	<title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
+
+</head>
+
+<body class="body">
+
+	<!-- header -->
+	<header class="header">
+		<div class="header__wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="header__content">
+							<!-- header logo -->
+							<a href="index.html" class="header__logo">
+								<img src="icon/LOGO.png" alt="" style="max-width: 325px;">
+							</a>
+							<!-- end header logo -->
+
+							<!-- header nav -->
+							<ul class="header__nav">
+								<!-- dropdown -->
+								<li class="header__nav-item">
+									<a class="dropdown-toggle header__nav-link" href="#" role="button"
+										id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">Anasayfa</a>
+
+									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
+										<li><a href="index.html">Anasayfa slayt arka</a></li>
+										<li><a href="index2.html">Anasayfa statik arka</a></li>
+									</ul>
+								</li>
+								<!-- end dropdown -->
+
+								<!-- dropdown -->
+								<li class="header__nav-item">
+									<a class="dropdown-toggle header__nav-link" href="#" role="button"
+										id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">Katalog</a>
+
+									<ul class="dropdown-menu header__dropdown-menu"
+										aria-labelledby="dropdownMenuCatalog">
+										<li><a href="catalog1.html">Katalog Izgara</a></li>
+										<li><a href="catalog2.html">Katalog Liste</a></li>
+										<li><a href="details1.html">Film Detayları</a></li>
+										<li><a href="details2.html">Dizi Detayları</a></li>
+									</ul>
+								</li>
+								<!-- end dropdown -->
+
+								<li class="header__nav-item">
+									<a href="pricing.html" class="header__nav-link">Fiyatlandırma</a>
+								</li>
+
+								<li class="header__nav-item">
+									<a href="faq.html" class="header__nav-link">Yardım</a>
+								</li>
+
+								<!-- dropdown -->
+								<li class="dropdown header__nav-item">
+									<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#"
+										role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false"><i class="icon ion-ios-more"></i></a>
+
+									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
+										<li><a href="about.html">Hakkında</a></li>
+										<li><a href="signin.html">Giriş Yap</a></li>
+										<li><a href="signup.html">Kayıt Ol</a></li>
+										<li><a href="404.html">404 Sayfası</a></li>
+									</ul>
+								</li>
+								<!-- end dropdown -->
+							</ul>
+							<!-- end header nav -->
+
+							<!-- header auth -->
+							<div class="header__auth">
+								<button class="header__search-btn" type="button">
+									<i class="icon ion-ios-search"></i>
+								</button>
+
+								<a href="signin.html" class="header__sign-in">
+									<i class="icon ion-ios-log-in"></i>
+									<span>giriş yap</span>
+								</a>
+							</div>
+							<!-- end header auth -->
+
+							<!-- header menu btn -->
+							<button class="header__btn" type="button">
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+							<!-- end header menu btn -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- header search -->
+		<form action="#" class="header__search">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="header__search-content">
+							<input type="text" placeholder="Aradığınız film veya diziyi arayın">
+
+							<button type="button">ara</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		<!-- end header search -->
+	</header>
+	<!-- end header -->
+
+	<!-- end header -->
+
+	<!-- Notices & Updates Section -->
+	<section class="section section--notices"
+		style="background-color: #2b2b31; padding-bottom: 30px; margin-top: 70px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<!-- Title -->
+					<h2 class="content__title" style="margin-bottom: 20px;">Tüm Duyurular &amp; Güncellemeler</h2>
+				</div>
+
+				<div class="col-12">
+					<ul class="notices__list" style="list-style: none; padding: 0;">
+						<!-- 1. Notice -->
+						<li class="notices__item"
+							style="background-color: #28282d; padding: 15px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; border-radius: 4px;">
+							<span class="notices__title" style="color: #fff; font-size: 16px;">Yeni sezon inceleme
+								maratonu başladı</span>
+							<button type="button" class="header__sign-in"
+								style="width: auto; padding: 0 20px; height: 30px; font-size: 12px;" data-toggle="modal"
+								data-target="#notice1Modal">
+								<span>Detay</span>
+							</button>
+						</li>
+						<!-- ... (Duplicate other notices here for the full list) ... -->
+						<!-- For brevity, I will just keep the existing 5 and pretend there are more, or duplicate them if needed. 
+                             Since the user asked for "All notices", I will duplicate the 5 notices to show a longer list. -->
+						<li class="notices__item"
+							style="background-color: #28282d; padding: 15px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; border-radius: 4px;">
+							<span class="notices__title" style="color: #fff; font-size: 16px;">En çok oy alan 10 film
+								listesi yayında</span>
+							<button type="button" class="header__sign-in"
+								style="width: auto; padding: 0 20px; height: 30px; font-size: 12px;" data-toggle="modal"
+								data-target="#notice2Modal">
+								<span>Detay</span>
+							</button>
+						</li>
+						<li class="notices__item"
+							style="background-color: #28282d; padding: 15px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; border-radius: 4px;">
+							<span class="notices__title" style="color: #fff; font-size: 16px;">Kullanıcı sözleşmesi
+								güncellendi</span>
+							<button type="button" class="header__sign-in"
+								style="width: auto; padding: 0 20px; height: 30px; font-size: 12px;" data-toggle="modal"
+								data-target="#notice3Modal">
+								<span>Detay</span>
+							</button>
+						</li>
+						<li class="notices__item"
+							style="background-color: #28282d; padding: 15px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; border-radius: 4px;">
+							<span class="notices__title" style="color: #fff; font-size: 16px;">Yeni “Editörün Seçimi”
+								bölümü yayında</span>
+							<button type="button" class="header__sign-in"
+								style="width: auto; padding: 0 20px; height: 30px; font-size: 12px;" data-toggle="modal"
+								data-target="#notice4Modal">
+								<span>Detay</span>
+							</button>
+						</li>
+						<li class="notices__item"
+							style="background-color: #28282d; padding: 15px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; border-radius: 4px;">
+							<span class="notices__title" style="color: #fff; font-size: 16px;">Haftalık dizi
+								değerlendirme canlı yayını</span>
+							<button type="button" class="header__sign-in"
+								style="width: auto; padding: 0 20px; height: 30px; font-size: 12px;" data-toggle="modal"
+								data-target="#notice5Modal">
+								<span>Detay</span>
+							</button>
+						</li>
+						<!-- Duplicates for demo -->
+						<li class="notices__item"
+							style="background-color: #28282d; padding: 15px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; border-radius: 4px;">
+							<span class="notices__title" style="color: #fff; font-size: 16px;">Eski Duyuru 1</span>
+							<button type="button" class="header__sign-in"
+								style="width: auto; padding: 0 20px; height: 30px; font-size: 12px;" data-toggle="modal"
+								data-target="#notice1Modal">
+								<span>Detay</span>
+							</button>
+						</li>
+						<li class="notices__item"
+							style="background-color: #28282d; padding: 15px; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; border-radius: 4px;">
+							<span class="notices__title" style="color: #fff; font-size: 16px;">Eski Duyuru 2</span>
+							<button type="button" class="header__sign-in"
+								style="width: auto; padding: 0 20px; height: 30px; font-size: 12px;" data-toggle="modal"
+								data-target="#notice2Modal">
+								<span>Detay</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- content -->
+	<section class="content">
+		<div class="content__head">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<!-- content title -->
+						<h2 class="content__title">Yeni öğeler</h2>
+						<!-- end content title -->
+
+						<!-- content tabs nav -->
+						<ul class="nav nav-tabs content__tabs" id="content__tabs" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link active" data-toggle="tab" href="#tab-1" role="tab"
+									aria-controls="tab-1" aria-selected="true">YENİ ÇIKANLAR</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2"
+									aria-selected="false">FİLMLER</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#tab-3" role="tab" aria-controls="tab-3"
+									aria-selected="false">DİZİLER</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#tab-4" role="tab" aria-controls="tab-4"
+									aria-selected="false">ÇİZGİ FİLMLER</a>
+							</li>
+						</ul>
+						<!-- end content tabs nav -->
+
+						<!-- content mobile tabs nav -->
+						<div class="content__mobile-tabs" id="content__mobile-tabs">
+							<div class="content__mobile-tabs-btn dropdown-toggle" role="navigation" id="mobile-tabs"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<input type="button" value="Yeni öğeler">
+								<span></span>
+							</div>
+
+							<div class="content__mobile-tabs-menu dropdown-menu" aria-labelledby="mobile-tabs">
+								<ul class="nav nav-tabs" role="tablist">
+									<li class="nav-item"><a class="nav-link active" id="1-tab" data-toggle="tab"
+											href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">YENİ
+											ÇIKANLAR</a></li>
+
+									<li class="nav-item"><a class="nav-link" id="2-tab" data-toggle="tab" href="#tab-2"
+											role="tab" aria-controls="tab-2" aria-selected="false">FİLMLER</a></li>
+
+									<li class="nav-item"><a class="nav-link" id="3-tab" data-toggle="tab" href="#tab-3"
+											role="tab" aria-controls="tab-3" aria-selected="false">DİZİLER</a></li>
+
+									<li class="nav-item"><a class="nav-link" id="4-tab" data-toggle="tab" href="#tab-4"
+											role="tab" aria-controls="tab-4" aria-selected="false">ÇİZGİ FİLMLER</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- end content mobile tabs nav -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<!-- content tabs -->
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="1-tab">
+					<div class="row">
+						<!-- card -->
+						<div class="col-6 col-sm-12 col-lg-6">
+							<div class="card card--list">
+								<div class="row">
+									<div class="col-12 col-sm-4">
+										<div class="card__cover">
+											<img src="img/covers/cover.jpg" alt="">
+											<a href="#" class="card__play">
+												<i class="icon ion-ios-play"></i>
+											</a>
+										</div>
+									</div>
+
+									<div class="col-12 col-sm-8">
+										<div class="card__content">
+											<h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+											<span class="card__category">
+												<a href="#">Aksiyon</a>
+												<a href="#">Gerilim</a>
+											</span>
+
+											<div class="card__wrap">
+												<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+
+												<ul class="card__list">
+													<li>HD</li>
+													<li>16+</li>
+												</ul>
+											</div>
+
+											<div class="card__description">
+												<p>Okuyucunun sayfa içeriğine bakarken sayfa düzeninden dikkatinin
+													dağılacağı bilinen bir gerçektir. Lorem Ipsum kullanmanın amacı,
+													'Buraya içerik gelecek, buraya içerik gelecek' yerine harflerin az
+													çok normal bir dağılıma sahip olması ve okunabilir İngilizce gibi
+													görünmesidir.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-12 col-lg-6">
+							<div class="card card--list">
+								<div class="row">
+									<div class="col-12 col-sm-4">
+										<div class="card__cover">
+											<img src="img/covers/cover2.jpg" alt="">
+											<a href="#" class="card__play">
+												<i class="icon ion-ios-play"></i>
+											</a>
+										</div>
+									</div>
+
+									<div class="col-12 col-sm-8">
+										<div class="card__content">
+											<h3 class="card__title"><a href="#">Benched</a></h3>
+											<span class="card__category">
+												<a href="#">Komedi</a>
+											</span>
+
+											<div class="card__wrap">
+												<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+
+												<ul class="card__list">
+													<li>HD</li>
+													<li>16+</li>
+												</ul>
+											</div>
+
+											<div class="card__description">
+												<p>Lorem Ipsum, matbaa ve dizgi endüstrisinin basit bir mıgır metnidir.
+													Lorem Ipsum, bilinmeyen bir matbaacının bir tip numune kitabı yapmak
+													için bir yazı galerisini alıp karıştırdığı 1500'lerden beri
+													endüstrinin standart sahte metni olmuştur.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-12 col-lg-6">
+							<div class="card card--list">
+								<div class="row">
+									<div class="col-12 col-sm-4">
+										<div class="card__cover">
+											<img src="img/covers/cover3.jpg" alt="">
+											<a href="#" class="card__play">
+												<i class="icon ion-ios-play"></i>
+											</a>
+										</div>
+									</div>
+
+									<div class="col-12 col-sm-8">
+										<div class="card__content">
+											<h3 class="card__title"><a href="#">Whitney</a></h3>
+											<span class="card__category">
+												<a href="#">Romantik</a>
+												<a href="#">Dram</a>
+												<a href="#">Müzik</a>
+											</span>
+
+											<div class="card__wrap">
+												<span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
+
+												<ul class="card__list">
+													<li>HD</li>
+													<li>16+</li>
+												</ul>
+											</div>
+
+											<div class="card__description">
+												<p>Sadece beş yüzyıl değil, aynı zamanda elektronik dizgiye geçişte de
+													ayakta kalmıştır, esasen değişmeden kalmıştır. 1960'larda Lorem
+													Ipsum pasajları içeren Letraset yapraklarının yayınlanmasıyla ve
+													daha yakın zamanda Lorem Ipsum sürümlerini içeren Aldus PageMaker
+													gibi masaüstü yayıncılık yazılımlarıyla popüler hale gelmiştir.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-12 col-lg-6">
+							<div class="card card--list">
+								<div class="row">
+									<div class="col-12 col-sm-4">
+										<div class="card__cover">
+											<img src="img/covers/cover4.jpg" alt="">
+											<a href="#" class="card__play">
+												<i class="icon ion-ios-play"></i>
+											</a>
+										</div>
+									</div>
+
+									<div class="col-12 col-sm-8">
+										<div class="card__content">
+											<h3 class="card__title"><a href="#">Blindspotting</a></h3>
+											<span class="card__category">
+												<a href="#">Komedi</a>
+												<a href="#">Dram</a>
+											</span>
+
+											<div class="card__wrap">
+												<span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
+
+												<ul class="card__list">
+													<li>HD</li>
+													<li>16+</li>
+												</ul>
+											</div>
+
+											<div class="card__description">
+												<p>Birçok masaüstü yayıncılık paketi ve web sayfası düzenleyicisi artık
+													varsayılan model metni olarak Lorem Ipsum'u kullanıyor ve 'lorem
+													ipsum' araması, henüz emekleme aşamasında olan birçok web sitesini
+													ortaya çıkaracaktır. Yıllar içinde, bazen kazara, bazen kasıtlı
+													olarak (mizah enjekte edilmiş vb.) çeşitli versiyonlar gelişmiştir.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-12 col-lg-6">
+							<div class="card card--list">
+								<div class="row">
+									<div class="col-12 col-sm-4">
+										<div class="card__cover">
+											<img src="img/covers/cover5.jpg" alt="">
+											<a href="#" class="card__play">
+												<i class="icon ion-ios-play"></i>
+											</a>
+										</div>
+									</div>
+
+									<div class="col-12 col-sm-8">
+										<div class="card__content">
+											<h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+											<span class="card__category">
+												<a href="#">Aksiyon</a>
+												<a href="#">Gerilim</a>
+											</span>
+
+											<div class="card__wrap">
+												<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+
+												<ul class="card__list">
+													<li>HD</li>
+													<li>16+</li>
+												</ul>
+											</div>
+
+											<div class="card__description">
+												<p>Lorem Ipsum pasajlarının birçok varyasyonu vardır, ancak çoğunluğu
+													bir şekilde, enjekte edilen mizah veya biraz bile inandırıcı
+													görünmeyen rastgele kelimelerle değişikliğe uğramıştır. Bir Lorem
+													Ipsum pasajı kullanacaksanız, metnin ortasında utanç verici bir şey
+													gizlenmediğinden emin olmanız gerekir.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-12 col-lg-6">
+							<div class="card card--list">
+								<div class="row">
+									<div class="col-12 col-sm-4">
+										<div class="card__cover">
+											<img src="img/covers/cover6.jpg" alt="">
+											<a href="#" class="card__play">
+												<i class="icon ion-ios-play"></i>
+											</a>
+										</div>
+									</div>
+
+									<div class="col-12 col-sm-8">
+										<div class="card__content">
+											<h3 class="card__title"><a href="#">Benched</a></h3>
+											<span class="card__category">
+												<a href="#">Komedi</a>
+											</span>
+
+											<div class="card__wrap">
+												<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+
+												<ul class="card__list">
+													<li>HD</li>
+													<li>16+</li>
+												</ul>
+											</div>
+
+											<div class="card__description">
+												<p>İnternet üzerindeki tüm Lorem Ipsum üreteçleri, önceden tanımlanmış
+													parçaları gerektiği gibi tekrarlama eğilimindedir, bu da bunu
+													İnternet üzerindeki ilk gerçek üreteç yapar. Makul görünen Lorem
+													Ipsum üretmek için bir avuç model cümle yapısıyla birleştirilmiş
+													200'den fazla Latince kelimeden oluşan bir sözlük kullanır. Bu
+													nedenle oluşturulan Lorem Ipsum her zaman tekrar, enjekte edilen
+													mizah veya karakteristik olmayan kelimelerden vb. muaftır.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="2-tab">
+					<div class="row">
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+									<span class="card__category">
+										<a href="#">Aksiyon</a>
+										<a href="#">Gerilim</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover2.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Benched</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover3.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Whitney</a></h3>
+									<span class="card__category">
+										<a href="#">Romantik</a>
+										<a href="#">Dram</a>
+										<a href="#">Müzik</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover4.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Blindspotting</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+										<a href="#">Dram</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover5.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+									<span class="card__category">
+										<a href="#">Aksiyon</a>
+										<a href="#">Gerilim</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover6.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Benched</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover6.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Whitney</a></h3>
+									<span class="card__category">
+										<a href="#">Romantik</a>
+										<a href="#">Dram</a>
+										<a href="#">Müzik</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover5.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Blindspotting</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+										<a href="#">Dram</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover4.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+									<span class="card__category">
+										<a href="#">Aksiyon</a>
+										<a href="#">Gerilim</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover3.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Benched</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover2.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Whitney</a></h3>
+									<span class="card__category">
+										<a href="#">Romantik</a>
+										<a href="#">Dram</a>
+										<a href="#">Müzik</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Blindspotting</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+										<a href="#">Dram</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="3-tab">
+					<div class="row">
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover2.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+									<span class="card__category">
+										<a href="#">Aksiyon</a>
+										<a href="#">Gerilim</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Benched</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover4.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Whitney</a></h3>
+									<span class="card__category">
+										<a href="#">Romantik</a>
+										<a href="#">Dram</a>
+										<a href="#">Müzik</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover3.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Blindspotting</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+										<a href="#">Dram</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover6.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+									<span class="card__category">
+										<a href="#">Aksiyon</a>
+										<a href="#">Gerilim</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover5.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Benched</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover5.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Whitney</a></h3>
+									<span class="card__category">
+										<a href="#">Romantik</a>
+										<a href="#">Dram</a>
+										<a href="#">Müzik</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover6.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Blindspotting</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+										<a href="#">Dram</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover3.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+									<span class="card__category">
+										<a href="#">Aksiyon</a>
+										<a href="#">Gerilim</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover4.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Benched</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Whitney</a></h3>
+									<span class="card__category">
+										<a href="#">Romantik</a>
+										<a href="#">Dram</a>
+										<a href="#">Müzik</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover2.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Blindspotting</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+										<a href="#">Dram</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+					</div>
+				</div>
+
+				<div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="4-tab">
+					<div class="row">
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+									<span class="card__category">
+										<a href="#">Aksiyon</a>
+										<a href="#">Gerilim</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover3.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Benched</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover2.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Whitney</a></h3>
+									<span class="card__category">
+										<a href="#">Romantik</a>
+										<a href="#">Dram</a>
+										<a href="#">Müzik</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover6.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Blindspotting</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+										<a href="#">Dram</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover4.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+									<span class="card__category">
+										<a href="#">Aksiyon</a>
+										<a href="#">Gerilim</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover5.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Benched</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover6.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Whitney</a></h3>
+									<span class="card__category">
+										<a href="#">Romantik</a>
+										<a href="#">Dram</a>
+										<a href="#">Müzik</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover5.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Blindspotting</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+										<a href="#">Dram</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover4.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+									<span class="card__category">
+										<a href="#">Aksiyon</a>
+										<a href="#">Gerilim</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover3.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Benched</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover2.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Whitney</a></h3>
+									<span class="card__category">
+										<a href="#">Romantik</a>
+										<a href="#">Dram</a>
+										<a href="#">Müzik</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+
+						<!-- card -->
+						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+							<div class="card">
+								<div class="card__cover">
+									<img src="img/covers/cover.jpg" alt="">
+									<a href="#" class="card__play">
+										<i class="icon ion-ios-play"></i>
+									</a>
+								</div>
+								<div class="card__content">
+									<h3 class="card__title"><a href="#">Blindspotting</a></h3>
+									<span class="card__category">
+										<a href="#">Komedi</a>
+										<a href="#">Dram</a>
+									</span>
+									<span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
+								</div>
+							</div>
+						</div>
+						<!-- end card -->
+					</div>
+				</div>
+			</div>
+			<!-- end content tabs -->
+		</div>
+	</section>
+	<!-- end content -->
+
+	<!-- expected premiere -->
+	<section class="section section--bg" data-bg="img/section/section.jpg">
+		<div class="container">
+			<div class="row">
+				<!-- section title -->
+				<div class="col-12">
+					<h2 class="section__title">Beklenen Prömiyerler</h2>
+				</div>
+				<!-- end section title -->
+
+				<!-- card -->
+				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+					<div class="card">
+						<div class="card__cover">
+							<img src="img/covers/cover.jpg" alt="">
+							<a href="#" class="card__play">
+								<i class="icon ion-ios-play"></i>
+							</a>
+						</div>
+						<div class="card__content">
+							<h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+							<span class="card__category">
+								<a href="#">Aksiyon</a>
+								<a href="#">Gerilim</a>
+							</span>
+							<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+						</div>
+					</div>
+				</div>
+				<!-- end card -->
+
+				<!-- card -->
+				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+					<div class="card">
+						<div class="card__cover">
+							<img src="img/covers/cover3.jpg" alt="">
+							<a href="#" class="card__play">
+								<i class="icon ion-ios-play"></i>
+							</a>
+						</div>
+						<div class="card__content">
+							<h3 class="card__title"><a href="#">Benched</a></h3>
+							<span class="card__category">
+								<a href="#">Komedi</a>
+							</span>
+							<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+						</div>
+					</div>
+				</div>
+				<!-- end card -->
+
+				<!-- card -->
+				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+					<div class="card">
+						<div class="card__cover">
+							<img src="img/covers/cover2.jpg" alt="">
+							<a href="#" class="card__play">
+								<i class="icon ion-ios-play"></i>
+							</a>
+						</div>
+						<div class="card__content">
+							<h3 class="card__title"><a href="#">Whitney</a></h3>
+							<span class="card__category">
+								<a href="#">Romantik</a>
+								<a href="#">Dram</a>
+								<a href="#">Müzik</a>
+							</span>
+							<span class="card__rate"><i class="icon ion-ios-star"></i>6.3</span>
+						</div>
+					</div>
+				</div>
+				<!-- end card -->
+
+				<!-- card -->
+				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+					<div class="card">
+						<div class="card__cover">
+							<img src="img/covers/cover6.jpg" alt="">
+							<a href="#" class="card__play">
+								<i class="icon ion-ios-play"></i>
+							</a>
+						</div>
+						<div class="card__content">
+							<h3 class="card__title"><a href="#">Blindspotting</a></h3>
+							<span class="card__category">
+								<a href="#">Komedi</a>
+								<a href="#">Dram</a>
+							</span>
+							<span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
+						</div>
+					</div>
+				</div>
+				<!-- end card -->
+
+				<!-- card -->
+				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+					<div class="card">
+						<div class="card__cover">
+							<img src="img/covers/cover4.jpg" alt="">
+							<a href="#" class="card__play">
+								<i class="icon ion-ios-play"></i>
+							</a>
+						</div>
+						<div class="card__content">
+							<h3 class="card__title"><a href="#">I Dream in Another Language</a></h3>
+							<span class="card__category">
+								<a href="#">Aksiyon</a>
+								<a href="#">Gerilim</a>
+							</span>
+							<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+						</div>
+					</div>
+				</div>
+				<!-- end card -->
+
+				<!-- card -->
+				<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+					<div class="card">
+						<div class="card__cover">
+							<img src="img/covers/cover5.jpg" alt="">
+							<a href="#" class="card__play">
+								<i class="icon ion-ios-play"></i>
+							</a>
+						</div>
+						<div class="card__content">
+							<h3 class="card__title"><a href="#">Benched</a></h3>
+							<span class="card__category">
+								<a href="#">Komedi</a>
+							</span>
+							<span class="card__rate"><i class="icon ion-ios-star"></i>7.1</span>
+						</div>
+					</div>
+				</div>
+				<!-- end card -->
+
+				<!-- section btn -->
+				<div class="col-12">
+					<a href="#" class="section__btn">Daha fazla göster</a>
+				</div>
+				<!-- end section btn -->
+			</div>
+		</div>
+	</section>
+	<!-- end expected premiere -->
+
+	<!-- partners -->
+	<section class="section">
+		<div class="container">
+			<div class="row">
+				<!-- section title -->
+				<div class="col-12">
+					<h2 class="section__title section__title--no-margin">İş Ortaklarımız</h2>
+				</div>
+				<!-- end section title -->
+
+				<!-- section text -->
+				<div class="col-12">
+					<p class="section__text section__text--last-with-margin">Okuyucunun sayfa düzenine bakarken sayfa
+						içeriğinden dikkatinin dağılacağı <b>bilinen</b> bir gerçektir. Lorem Ipsum kullanmanın amacı,
+						harflerin az çok normal bir dağılıma sahip olmasıdır.</p>
+				</div>
+				<!-- end section text -->
+
+				<!-- partner -->
+				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+					<a href="#" class="partner">
+						<img src="img/partners/themeforest-light-background.png" alt="" class="partner__img">
+					</a>
+				</div>
+				<!-- end partner -->
+
+				<!-- partner -->
+				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+					<a href="#" class="partner">
+						<img src="img/partners/audiojungle-light-background.png" alt="" class="partner__img">
+					</a>
+				</div>
+				<!-- end partner -->
+
+				<!-- partner -->
+				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+					<a href="#" class="partner">
+						<img src="img/partners/codecanyon-light-background.png" alt="" class="partner__img">
+					</a>
+				</div>
+				<!-- end partner -->
+
+				<!-- partner -->
+				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+					<a href="#" class="partner">
+						<img src="img/partners/photodune-light-background.png" alt="" class="partner__img">
+					</a>
+				</div>
+				<!-- end partner -->
+
+				<!-- partner -->
+				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+					<a href="#" class="partner">
+						<img src="img/partners/activeden-light-background.png" alt="" class="partner__img">
+					</a>
+				</div>
+				<!-- end partner -->
+
+				<!-- partner -->
+				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+					<a href="#" class="partner">
+						<img src="img/partners/3docean-light-background.png" alt="" class="partner__img">
+					</a>
+				</div>
+				<!-- end partner -->
+			</div>
+		</div>
+	</section>
+	<!-- end partners -->
+
+	<!-- footer -->
+	<footer class="footer" style="padding-top: 0;">
+		<div class="container-fluid" style="padding: 0; margin-bottom: 50px;">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1796.765208128347!2d29.81460954197562!3d40.76671270480561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1str!2str!4v1764788210861!5m2!1str!2str"
+				width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+		<div class="container">
+			<div class="row">
+				<!-- footer list -->
+				<div class="col-12 col-md-3">
+					<h6 class="footer__title">Uygulamamızı İndirin</h6>
+					<ul class="footer__app">
+						<li><a href="#"><img src="img/Download_on_the_App_Store_Badge.svg" alt=""></a></li>
+						<li><a href="#"><img src="img/google-play-badge.png" alt=""></a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer list -->
+				<div class="col-6 col-sm-4 col-md-3">
+					<h6 class="footer__title">Kaynaklar</h6>
+					<ul class="footer__list">
+						<li><a href="#">Hakkımızda</a></li>
+						<li><a href="#">Fiyatlandırma</a></li>
+						<li><a href="#">Yardım</a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer list -->
+				<div class="col-6 col-sm-4 col-md-3">
+					<h6 class="footer__title">Yasal</h6>
+					<ul class="footer__list">
+						<li><a href="#">Kullanım Koşulları</a></li>
+						<li><a href="#">Gizlilik Politikası</a></li>
+						<li><a href="#">Güvenlik</a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer list -->
+				<div class="col-12 col-sm-4 col-md-3">
+					<h6 class="footer__title">İletişim</h6>
+					<ul class="footer__list">
+						<li><a href="tel:+905332574625">+90 (533) 257-4625</a></li>
+						<li><a href="mailto:support@moviego.com">alibugraeroglu@gmail.com</a></li>
+					</ul>
+					<ul class="footer__social">
+						<li class="facebook"><a href="#"><i class="icon ion-logo-facebook"></i></a></li>
+						<li class="instagram"><a href="#"><i class="icon ion-logo-instagram"></i></a></li>
+						<li class="twitter"><a href="#"><i class="icon ion-logo-twitter"></i></a></li>
+						<li class="vk"><a href="#"><i class="icon ion-logo-vk"></i></a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer copyright -->
+				<div class="col-12">
+					<div class="footer__copyright">
+						<small><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></small>
+
+						<ul>
+							<li><a href="#">Kullanım Koşulları</a></li>
+							<li><a href="#">Gizlilik Politikası</a></li>
+							<li><a href="https://github.com/aliieroglu" target="_blank">Tasarım & Kodlama: Ali Buğra
+									Eroğlu</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- end footer copyright -->
+			</div>
+		</div>
+	</footer>
+	<!-- end footer -->
+
+	<!-- Modals -->
+	<!-- 1. Notice Modal -->
+	<div class="modal fade" id="notice1Modal" tabindex="-1" role="dialog" aria-labelledby="notice1Label"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content" style="background-color: #2b2b31; color: #fff;">
+				<div class="modal-header" style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+					<h5 class="modal-title" id="notice1Label">Yeni sezon inceleme maratonu başladı</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #fff;">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Bu ay boyunca her akşam saat 21:00’de, seçili dizilerin yeni sezonlarını detaylı inceleyeceğimiz
+						özel bir maraton başlatıyoruz. Kullanıcılarımız da yorumlarıyla yayına katkı sağlayabilecek.</p>
+					<p><strong>Tarih:</strong> 1–30 Mart</p>
+					<p><strong>Platform:</strong> FilmKutum Canlı Yayın</p>
+					<p class="mt-3">
+						<strong>Ek dökümanlar:</strong><br>
+						<a href="#" target="_blank" style="color: #ff55a5;">Program Akışı (PDF)</a><br>
+						<a href="#" target="_blank" style="color: #ff55a5;">Katılım Koşulları (Word)</a>
+					</p>
+				</div>
+				<div class="modal-footer" style="border-top: 1px solid rgba(255,255,255,0.05);">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 2. Notice Modal -->
+	<div class="modal fade" id="notice2Modal" tabindex="-1" role="dialog" aria-labelledby="notice2Label"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content" style="background-color: #2b2b31; color: #fff;">
+				<div class="modal-header" style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+					<h5 class="modal-title" id="notice2Label">En çok oy alan 10 film listesi yayında</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #fff;">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Son 6 ay içinde kullanıcılarımızın verdiği puanlara göre en yüksek ortalama puana sahip 10 filmi
+						listeledik. Liste her ayın başında otomatik olarak güncellenecek.</p>
+					<p><strong>İçerik:</strong> Tür, çıkış yılı, ortalama puan ve kısa yorumlardan oluşan detaylı bir
+						tablo.</p>
+					<p class="mt-3">
+						<strong>Ek dökümanlar:</strong><br>
+						<a href="#" target="_blank" style="color: #ff55a5;">Top 10 Film Listesi (PDF)</a>
+					</p>
+				</div>
+				<div class="modal-footer" style="border-top: 1px solid rgba(255,255,255,0.05);">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 3. Notice Modal -->
+	<div class="modal fade" id="notice3Modal" tabindex="-1" role="dialog" aria-labelledby="notice3Label"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content" style="background-color: #2b2b31; color: #fff;">
+				<div class="modal-header" style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+					<h5 class="modal-title" id="notice3Label">Kullanıcı sözleşmesi güncellendi</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #fff;">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Hizmet kalitemizi artırmak ve yasal düzenlemelere uyum sağlamak amacıyla kullanıcı sözleşmemizde
+						bazı değişiklikler yaptık. Lütfen güncel metni inceleyiniz.</p>
+					<p class="mt-3">
+						<strong>Ek dökümanlar:</strong><br>
+						<a href="#" target="_blank" style="color: #ff55a5;">Kullanıcı Sözleşmesi v2.0 (PDF)</a>
+					</p>
+				</div>
+				<div class="modal-footer" style="border-top: 1px solid rgba(255,255,255,0.05);">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 4. Notice Modal -->
+	<div class="modal fade" id="notice4Modal" tabindex="-1" role="dialog" aria-labelledby="notice4Label"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content" style="background-color: #2b2b31; color: #fff;">
+				<div class="modal-header" style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+					<h5 class="modal-title" id="notice4Label">Yeni “Editörün Seçimi” bölümü yayında</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #fff;">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Her hafta editörlerimiz tarafından özenle seçilen filmleri ve dizileri bulabileceğiniz yeni
+						bölümümüz yayına girdi. Keşfetmeye hemen başlayın!</p>
+				</div>
+				<div class="modal-footer" style="border-top: 1px solid rgba(255,255,255,0.05);">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 5. Notice Modal -->
+	<div class="modal fade" id="notice5Modal" tabindex="-1" role="dialog" aria-labelledby="notice5Label"
+		aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content" style="background-color: #2b2b31; color: #fff;">
+				<div class="modal-header" style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+					<h5 class="modal-title" id="notice5Label">Haftalık dizi değerlendirme canlı yayını</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: #fff;">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Bu haftanın en çok konuşulan dizilerini canlı yayında değerlendiriyoruz. Sürpriz konuklar ve
+						ödüllü yarışmalar sizi bekliyor.</p>
+					<p><strong>Tarih:</strong> Her Cuma 20:00</p>
+				</div>
+				<div class="modal-footer" style="border-top: 1px solid rgba(255,255,255,0.05);">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- JS -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.min.js"></script>
+	<script src="js/wNumb.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="js/plyr.min.js"></script>
+	<script src="js/jquery.morelines.min.js"></script>
+	<script src="js/photoswipe.min.js"></script>
+	<script src="js/photoswipe-ui-default.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

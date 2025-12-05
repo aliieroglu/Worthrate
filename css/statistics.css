@@ -1,0 +1,133 @@
+/* Statistics Section Styles */
+.stats-container {
+    background-color: #2b2b31;
+    border-radius: 6px;
+    padding: 20px;
+    width: 100%;
+    color: #fff;
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.3);
+    display: none;
+    /* Hidden by default */
+}
+
+.stats-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.stats-title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.stats-divider {
+    width: 40px;
+    height: 2px;
+    background-color: #ff55a5;
+    margin-top: 5px;
+}
+
+.stats-summary {
+    text-align: right;
+}
+
+.stats-rating {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1;
+}
+
+.stats-count {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.stats-bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stats-label {
+    width: 30px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.stats-bar-bg {
+    flex: 1;
+    height: 8px;
+    background-color: #28282d;
+    border-radius: 4px;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.stats-bar-fill {
+    height: 100%;
+    background-color: #ff55a5;
+    border-radius: 4px;
+}
+
+.stats-value {
+    width: 60px;
+    text-align: right;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Toggle Header Styles */
+.player-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #2b2b31;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.toggle-btn:hover {
+    color: #ff55a5;
+}
+
+.toggle-btn i {
+    font-size: 18px;
+}
+
+.toggle-btn--left i {
+    margin-right: 8px;
+}
+
+.toggle-btn--right i {
+    margin-left: 8px;
+}
+
+.toggle-btn.active {
+    color: #ff55a5;
+}
+
+.toggle-btn.disabled {
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
+}

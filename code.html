@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FlixGo - Admin Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#e6005c",
+              "background-light": "#f1f5f9",
+              "background-dark": "#1a1a1a",
+              "card-light": "#ffffff",
+              "card-dark": "#262626",
+              "text-light-primary": "#1a1a1a",
+              "text-dark-primary": "#ffffff",
+              "text-light-secondary": "#6b7280",
+              "text-dark-secondary": "#a1a1aa",
+              "border-light": "#e5e7eb",
+              "border-dark": "#3f3f46",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-icons-outlined {
+            font-size: inherit;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex h-screen">
+<aside class="w-64 flex-shrink-0 bg-card-light dark:bg-card-dark flex flex-col">
+<div class="h-20 flex items-center px-6">
+<h1 class="text-2xl font-bold text-primary">FLIXGO</h1>
+</div>
+<div class="px-6 py-4 border-y border-border-light dark:border-border-dark flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center">
+<span class="material-icons-outlined text-text-light-secondary dark:text-dark-secondary">person</span>
+</div>
+<div>
+<p class="text-sm font-semibold text-text-light-primary dark:text-text-dark-primary">John Doe</p>
+<p class="text-xs text-text-light-secondary dark:text-text-dark-secondary">Admin</p>
+</div>
+</div>
+<button class="text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">
+<span class="material-icons-outlined text-2xl">logout</span>
+</button>
+</div>
+<nav class="flex-1 px-4 py-6 space-y-2">
+<a class="flex items-center px-4 py-2.5 text-sm font-medium text-primary bg-primary/10 rounded-lg" href="#">
+<span class="material-icons-outlined mr-3 text-lg">grid_view</span>
+                    DASHBOARD
+                </a>
+<a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg" href="#">
+<span class="material-icons-outlined mr-3 text-lg">movie</span>
+                    CATALOG
+                </a>
+<a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg" href="#">
+<span class="material-icons-outlined mr-3 text-lg">people</span>
+                    USERS
+                </a>
+<a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg" href="#">
+<span class="material-icons-outlined mr-3 text-lg">chat_bubble_outline</span>
+                    COMMENTS
+                </a>
+<a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg" href="#">
+<span class="material-icons-outlined mr-3 text-lg">star_border</span>
+                    REVIEWS
+                </a>
+<a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg" href="#">
+<span class="material-icons-outlined mr-3 text-lg">description</span>
+                    PAGES
+                </a>
+</nav>
+<div class="px-6 py-4 text-xs text-text-light-secondary dark:text-text-dark-secondary">
+<p>© FlixGo, 2018—2023.</p>
+<p>Create by Dmitry Volkov.</p>
+</div>
+</aside>
+<main class="flex-1 overflow-y-auto">
+<div class="p-8">
+<header class="flex items-center justify-between mb-8">
+<h1 class="text-3xl font-bold text-text-light-primary dark:text-text-dark-primary">Dashboard</h1>
+<button class="bg-primary text-white font-semibold py-2.5 px-6 rounded-lg hover:opacity-90 transition-opacity">ADD ITEM</button>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-lg">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Unique views this month</p>
+<p class="text-3xl font-bold text-text-light-primary dark:text-text-dark-primary mt-2">5 678</p>
+</div>
+<span class="material-icons-outlined text-primary text-3xl">bar_chart</span>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-lg">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Items added this month</p>
+<p class="text-3xl font-bold text-text-light-primary dark:text-text-dark-primary mt-2">172</p>
+</div>
+<span class="material-icons-outlined text-primary text-3xl">theaters</span>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-lg">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">New comments</p>
+<p class="text-3xl font-bold text-text-light-primary dark:text-text-dark-primary mt-2">2 573</p>
+</div>
+<span class="material-icons-outlined text-primary text-3xl">sms</span>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-lg">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">New reviews</p>
+<p class="text-3xl font-bold text-text-light-primary dark:text-text-dark-primary mt-2">1 021</p>
+</div>
+<span class="material-icons-outlined text-primary text-3xl">star</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-lg">
+<div class="flex items-center justify-between mb-4">
+<h2 class="flex items-center text-lg font-semibold text-text-light-primary dark:text-text-dark-primary">
+<span class="material-icons-outlined text-primary mr-2">military_tech</span>Top items
+                            </h2>
+<a class="text-sm text-text-light-secondary dark:text-text-dark-secondary hover:text-primary flex items-center" href="#">
+<span class="material-icons-outlined text-lg mr-1">refresh</span>View All
+                            </a>
+</div>
+<table class="w-full text-sm text-left text-text-light-primary dark:text-text-dark-primary">
+<thead class="text-xs uppercase text-text-light-secondary dark:text-text-dark-secondary">
+<tr>
+<th class="py-3 font-medium" scope="col">ID</th>
+<th class="py-3 font-medium" scope="col">Title</th>
+<th class="py-3 font-medium" scope="col">Category</th>
+<th class="py-3 font-medium text-right" scope="col">Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">321</td>
+<td class="py-3">The Lost City</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">Movie</td>
+<td class="py-3 text-right"><span class="flex items-center justify-end"><span class="material-icons-outlined text-primary text-sm mr-1">star</span>9.2</span></td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">54</td>
+<td class="py-3">Undercurrents</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">Anime</td>
+<td class="py-3 text-right"><span class="flex items-center justify-end"><span class="material-icons-outlined text-primary text-sm mr-1">star</span>9.1</span></td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">670</td>
+<td class="py-3">Tales from the Underworld</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">TV Show</td>
+<td class="py-3 text-right"><span class="flex items-center justify-end"><span class="material-icons-outlined text-primary text-sm mr-1">star</span>9.0</span></td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">241</td>
+<td class="py-3">The Unseen World</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">TV Show</td>
+<td class="py-3 text-right"><span class="flex items-center justify-end"><span class="material-icons-outlined text-primary text-sm mr-1">star</span>8.9</span></td>
+</tr>
+<tr>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">22</td>
+<td class="py-3">Redemption Road</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">Movie</td>
+<td class="py-3 text-right"><span class="flex items-center justify-end"><span class="material-icons-outlined text-primary text-sm mr-1">star</span>8.9</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-lg">
+<div class="flex items-center justify-between mb-4">
+<h2 class="flex items-center text-lg font-semibold text-text-light-primary dark:text-text-dark-primary">
+<span class="material-icons-outlined text-primary mr-2">movie_filter</span>Latest items
+                            </h2>
+<a class="text-sm text-text-light-secondary dark:text-text-dark-secondary hover:text-primary flex items-center" href="#">
+<span class="material-icons-outlined text-lg mr-1">refresh</span>View All
+                            </a>
+</div>
+<table class="w-full text-sm text-left text-text-light-primary dark:text-text-dark-primary">
+<thead class="text-xs uppercase text-text-light-secondary dark:text-text-dark-secondary">
+<tr>
+<th class="py-3 font-medium" scope="col">ID</th>
+<th class="py-3 font-medium" scope="col">Item</th>
+<th class="py-3 font-medium" scope="col">Category</th>
+<th class="py-3 font-medium text-right" scope="col">Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">749</td>
+<td class="py-3">I Dream in Another Language</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">TV Series</td>
+<td class="py-3 text-right"><span class="flex items-center justify-end"><span class="material-icons-outlined text-primary text-sm mr-1">star</span>7.7</span></td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">750</td>
+<td class="py-3">Benched</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">Movie</td>
+<td class="py-3 text-right"><span class="flex items-center justify-end"><span class="material-icons-outlined text-primary text-sm mr-1">star</span>6.4</span></td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">751</td>
+<td class="py-3">Whitney</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">TV Show</td>
+<td class="py-3 text-right"><span class="flex items-center justify-end"><span class="material-icons-outlined text-primary text-sm mr-1">star</span>8.1</span></td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">752</td>
+<td class="py-3">Blindspotting</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">Anime</td>
+<td class="py-3 text-right"><span class="flex items-center justify-end"><span class="material-icons-outlined text-primary text-sm mr-1">star</span>9.1</span></td>
+</tr>
+<tr>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">753</td>
+<td class="py-3">I Dream in Another Language</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">Movie</td>
+<td class="py-3 text-right"><span class="flex items-center justify-end"><span class="material-icons-outlined text-primary text-sm mr-1">star</span>6.5</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-lg">
+<div class="flex items-center justify-between mb-4">
+<h2 class="flex items-center text-lg font-semibold text-text-light-primary dark:text-text-dark-primary">
+<span class="material-icons-outlined text-primary mr-2">person_add</span>Latest users
+                            </h2>
+<a class="text-sm text-text-light-secondary dark:text-text-dark-secondary hover:text-primary flex items-center" href="#">
+<span class="material-icons-outlined text-lg mr-1">refresh</span>View All
+                            </a>
+</div>
+<table class="w-full text-sm text-left text-text-light-primary dark:text-text-dark-primary">
+<thead class="text-xs uppercase text-text-light-secondary dark:text-text-dark-secondary">
+<tr>
+<th class="py-3 font-medium" scope="col">ID</th>
+<th class="py-3 font-medium" scope="col">Full Name</th>
+<th class="py-3 font-medium" scope="col">Email</th>
+<th class="py-3 font-medium" scope="col">Username</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">1023</td>
+<td class="py-3">Matt Jones</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">email@email.com</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">Username</td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">1024</td>
+<td class="py-3">Tess Harper</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">email@email.com</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">Username</td>
+</tr>
+<tr>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">1025</td>
+<td class="py-3">Brian Cranston</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">email@email.com</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">Username</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-lg">
+<div class="flex items-center justify-between mb-4">
+<h2 class="flex items-center text-lg font-semibold text-text-light-primary dark:text-text-dark-primary">
+<span class="material-icons-outlined text-primary mr-2">rate_review</span>Latest reviews
+                            </h2>
+<a class="text-sm text-text-light-secondary dark:text-text-dark-secondary hover:text-primary flex items-center" href="#">
+<span class="material-icons-outlined text-lg mr-1">refresh</span>View All
+                            </a>
+</div>
+<table class="w-full text-sm text-left text-text-light-primary dark:text-text-dark-primary">
+<thead class="text-xs uppercase text-text-light-secondary dark:text-text-dark-secondary">
+<tr>
+<th class="py-3 font-medium" scope="col">ID</th>
+<th class="py-3 font-medium" scope="col">Item</th>
+<th class="py-3 font-medium" scope="col">Author</th>
+<th class="py-3 font-medium text-right" scope="col">Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">126</td>
+<td class="py-3">I Dream in Another Language</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">Jackson Brown</td>
+<td class="py-3 text-right"><span class="flex items-center justify-end"><span class="material-icons-outlined text-primary text-sm mr-1">star</span>7.2</span></td>
+</tr>
+<tr class="border-b border-border-light dark:border-border-dark">
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">125</td>
+<td class="py-3">Benched</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">Quang</td>
+<td class="py-3 text-right"><span class="flex items-center justify-end"><span class="material-icons-outlined text-primary text-sm mr-1">star</span>6.3</span></td>
+</tr>
+<tr>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">124</td>
+<td class="py-3">Whitney</td>
+<td class="py-3 text-text-light-secondary dark:text-text-dark-secondary">Brian Cranston</td>
+<td class="py-3 text-right"><span class="flex items-center justify-end"><span class="material-icons-outlined text-primary text-sm mr-1">star</span>8.4</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
