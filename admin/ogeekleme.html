@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>FlixGo - Öğe Ekle Sayfası</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#e6005c",
+            "background-light": "#f1f5f9",
+            "background-dark": "#1a1a1a",
+            "card-light": "#ffffff",
+            "card-dark": "#262626",
+            "text-light-primary": "#1a1a1a",
+            "text-dark-primary": "#ffffff",
+            "text-light-secondary": "#6b7280",
+            "text-dark-secondary": "#a1a1aa",
+            "border-light": "#e5e7eb",
+            "border-dark": "#3f3f46",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .material-icons-outlined {
+      font-size: inherit;
+    }
+
+    /* Custom form styles based on user request but adapted to theme */
+    .form-input-custom {
+      background-color: #ffffff;
+      /* Fallback/Light */
+      border-color: #e5e7eb;
+      color: #1a1a1a;
+    }
+
+    .dark .form-input-custom {
+      background-color: #262626;
+      /* card-dark */
+      border-color: #3f3f46;
+      /* border-dark */
+      color: #ffffff;
+    }
+
+    .form-radio {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 50%;
+      border: 2px solid #6b7280;
+      outline: none;
+      cursor: pointer;
+      transition: background-color 0.2s, border-color 0.2s;
+    }
+
+    .form-radio:checked {
+      border: 4px solid #e6005c;
+      /* primary */
+      background-color: #1a1a1a;
+    }
+
+    .dark .form-radio:checked {
+      background-color: #1a1a1a;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark font-display text-text-light-primary dark:text-text-dark-primary">
+  <div class="flex h-screen">
+    <aside class="w-64 flex-shrink-0 bg-card-light dark:bg-card-dark flex flex-col">
+      <div class="h-20 flex items-center px-6">
+        <img src="../icon/LOGO.png" alt="Worthrate Logo" class="h-16">
+      </div>
+      <div class="px-6 py-4 border-y border-border-light dark:border-border-dark flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center">
+            <span
+              class="material-icons-outlined text-text-light-secondary dark:text-dark-secondary text-2xl">person</span>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-text-light-primary dark:text-text-dark-primary">John Doe</p>
+            <p class="text-xs text-text-light-secondary dark:text-text-dark-secondary">Admin</p>
+          </div>
+        </div>
+        <button class="text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">
+          <span class="material-icons-outlined text-2xl">logout</span>
+        </button>
+      </div>
+      <nav class="flex-1 px-4 py-6 space-y-2">
+        <a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg"
+          href="index.html">
+          <span class="material-icons-outlined mr-3 text-lg">grid_view</span>
+          DASHBOARD
+        </a>
+        <a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg"
+          href="catalogAdmin.html">
+          <span class="material-icons-outlined mr-3 text-lg">movie</span>
+          CATALOG
+        </a>
+        <a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg"
+          href="kullanicilarAdmin.html">
+          <span class="material-icons-outlined mr-3 text-lg">people</span>
+          USERS
+        </a>
+        <a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg"
+          href="yorumlarAdmin.html">
+          <span class="material-icons-outlined mr-3 text-lg">chat_bubble_outline</span>
+          COMMENTS
+        </a>
+        <a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg"
+          href="reviewsAdmin.html">
+          <span class="material-icons-outlined mr-3 text-lg">star_border</span>
+          REVIEWS
+        </a>
+        <details class="group" open>
+          <summary
+            class="flex items-center justify-between px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+            <div class="flex items-center">
+              <span class="material-icons-outlined mr-3 text-lg">description</span>
+              PAGES
+            </div>
+            <span class="material-icons-outlined text-lg transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <ul class="mt-2 space-y-1 pl-11">
+            <li><a href="ogeekleme.html" class="block py-2 text-sm text-primary font-medium">Öğe Ekle</a></li>
+            <li><a href="editUser.html"
+                class="block py-2 text-sm text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">Kullanıcıyı
+                Düzenle</a></li>
+            <li><a href="../signin.html"
+                class="block py-2 text-sm text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">Giriş
+                Yap</a></li>
+            <li><a href="../signup.html"
+                class="block py-2 text-sm text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">Kayıt
+                Ol</a></li>
+          </ul>
+        </details>
+      </nav>
+      <div class="px-6 py-4 text-xs text-text-light-secondary dark:text-text-dark-secondary">
+        <p>© FlixGo, 2018—2023.</p>
+        <p>Create by Dmitry Volkov.</p>
+      </div>
+    </aside>
+    <main class="flex-1 overflow-y-auto">
+      <div class="p-8">
+        <h1 class="text-3xl font-bold mb-6 text-text-light-primary dark:text-text-dark-primary">Yeni öğe ekle</h1>
+        <div class="bg-card-light dark:bg-card-dark p-8 rounded-lg shadow-sm">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="md:col-span-1">
+              <input class="w-full rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border"
+                placeholder="Başlık" type="text" />
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="relative">
+                <select
+                  class="w-full appearance-none rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border">
+                  <option>FullHD</option>
+                </select>
+                <span
+                  class="material-icons-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary pointer-events-none">expand_more</span>
+              </div>
+              <div>
+                <input class="w-full rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border"
+                  placeholder="Yaş" type="text" />
+              </div>
+            </div>
+            <div class="md:col-span-1">
+              <textarea class="w-full rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border"
+                placeholder="Açıklama" rows="5"></textarea>
+            </div>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="relative">
+                <select
+                  class="w-full appearance-none rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border">
+                  <option>Tür seçiniz</option>
+                </select>
+                <span
+                  class="material-icons-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary pointer-events-none">expand_more</span>
+              </div>
+              <div>
+                <input class="w-full rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border"
+                  placeholder="Çalışma süresi" type="text" />
+              </div>
+              <div>
+                <input class="w-full rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border"
+                  placeholder="Prömiyer tarihi" type="text" />
+              </div>
+              <div class="relative">
+                <select
+                  class="w-full appearance-none rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border">
+                  <option>Ülke seçiniz</option>
+                </select>
+                <span
+                  class="material-icons-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary pointer-events-none">expand_more</span>
+              </div>
+            </div>
+            <div
+              class="relative border border-dashed border-border-light dark:border-border-dark rounded-lg p-3 flex items-center justify-between">
+              <span class="text-text-light-secondary dark:text-text-dark-secondary">Kapak yükle (240x340)</span>
+              <button class="text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">
+                <span class="material-icons-outlined">delete_outline</span>
+              </button>
+              <input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" type="file" />
+            </div>
+            <div>
+              <input class="w-full rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border"
+                placeholder="Arka plan bağlantısı (1920x1280)" type="text" />
+            </div>
+            <div class="relative">
+              <select
+                class="w-full appearance-none rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border">
+                <option>Yönetmen seçiniz</option>
+              </select>
+              <span
+                class="material-icons-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary pointer-events-none">expand_more</span>
+            </div>
+            <div class="relative">
+              <select
+                class="w-full appearance-none rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border">
+                <option>Oyuncuları seçiniz</option>
+              </select>
+              <span
+                class="material-icons-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary pointer-events-none">expand_more</span>
+            </div>
+            <div class="md:col-span-2 flex items-center space-x-6">
+              <span class="text-text-light-primary dark:text-text-dark-primary">Öğe Türü:</span>
+              <label class="flex items-center space-x-2 cursor-pointer">
+                <input checked="" class="form-radio" name="item-type" type="radio" />
+                <span class="text-text-light-primary dark:text-text-dark-primary">Film</span>
+              </label>
+              <label class="flex items-center space-x-2 cursor-pointer">
+                <input class="form-radio" name="item-type" type="radio" />
+                <span class="text-text-light-primary dark:text-text-dark-primary">TV Dizisi</span>
+              </label>
+            </div>
+            <div
+              class="md:col-span-2 relative border border-dashed border-border-light dark:border-border-dark rounded-lg p-3 flex items-center justify-between">
+              <span class="text-text-light-secondary dark:text-text-dark-secondary">Video yükle</span>
+              <button class="text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">
+                <span class="material-icons-outlined">movie_creation</span>
+              </button>
+              <input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" type="file" />
+            </div>
+            <div class="md:col-span-2">
+              <button class="bg-primary text-white font-bold py-3 px-10 rounded-lg hover:opacity-90 transition-opacity">
+                YAYINLA
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>FlixGo Kullanıcılar Sayfası</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#e6005c",
+            "background-light": "#f1f5f9",
+            "background-dark": "#1a1a1a",
+            "card-light": "#ffffff",
+            "card-dark": "#262626",
+            "text-light-primary": "#1a1a1a",
+            "text-dark-primary": "#ffffff",
+            "text-light-secondary": "#6b7280",
+            "text-dark-secondary": "#a1a1aa",
+            "border-light": "#e5e7eb",
+            "border-dark": "#3f3f46",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .material-icons-outlined {
+      font-size: inherit;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-dark-primary">
+  <div class="flex h-screen">
+    <aside class="w-64 flex-shrink-0 bg-card-light dark:bg-card-dark flex flex-col">
+      <div class="h-20 flex items-center px-6">
+        <img src="../icon/LOGO.png" alt="Worthrate Logo" class="h-16">
+      </div>
+      <div class="px-6 py-4 border-y border-border-light dark:border-border-dark flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center">
+            <span class="material-icons-outlined text-text-light-secondary dark:text-dark-secondary">person</span>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-text-light-primary dark:text-text-dark-primary">John Doe</p>
+            <p class="text-xs text-text-light-secondary dark:text-text-dark-secondary">Admin</p>
+          </div>
+        </div>
+        <button class="text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">
+          <span class="material-icons-outlined text-2xl">logout</span>
+        </button>
+      </div>
+      <nav class="flex-1 px-4 py-6 space-y-2">
+        <a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg"
+          href="index.html">
+          <span class="material-icons-outlined mr-3 text-lg">grid_view</span>
+          DASHBOARD
+        </a>
+        <a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg"
+          href="catalogAdmin.html">
+          <span class="material-icons-outlined mr-3 text-lg">movie</span>
+          CATALOG
+        </a>
+        <a class="flex items-center px-4 py-2.5 text-sm font-medium text-primary bg-primary/10 rounded-lg" href="#">
+          <span class="material-icons-outlined mr-3 text-lg">people</span>
+          USERS
+        </a>
+        <a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg"
+          href="yorumlarAdmin.html">
+          <span class="material-icons-outlined mr-3 text-lg">chat_bubble_outline</span>
+          COMMENTS
+        </a>
+        <a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg"
+          href="reviewsAdmin.html">
+          <span class="material-icons-outlined mr-3 text-lg">star_border</span>
+          REVIEWS
+        </a>
+        <details class="group">
+          <summary
+            class="flex items-center justify-between px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+            <div class="flex items-center">
+              <span class="material-icons-outlined mr-3 text-lg">description</span>
+              PAGES
+            </div>
+            <span class="material-icons-outlined text-lg transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <ul class="mt-2 space-y-1 pl-11">
+            <li><a href="ogeekleme.html"
+                class="block py-2 text-sm text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">Öğe
+                Ekle</a></li>
+            <li><a href="editUser.html"
+                class="block py-2 text-sm text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">Kullanıcıyı
+                Düzenle</a></li>
+            <li><a href="../signin.html"
+                class="block py-2 text-sm text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">Giriş
+                Yap</a></li>
+            <li><a href="../signup.html"
+                class="block py-2 text-sm text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">Kayıt
+                Ol</a></li>
+          </ul>
+        </details>
+      </nav>
+      <div class="px-6 py-4 text-xs text-text-light-secondary dark:text-text-dark-secondary">
+        <p>© FlixGo, 2018—2023.</p>
+        <p>Create by Dmitry Volkov.</p>
+      </div>
+    </aside>
+    <main class="flex-1 overflow-y-auto">
+      <div class="p-8">
+        <header class="flex items-center justify-between mb-8">
+          <div class="flex items-baseline space-x-4">
+            <h1 class="text-3xl font-bold text-text-light-primary dark:text-text-dark-primary">Kullanıcılar</h1>
+            <span class="text-text-light-secondary dark:text-text-dark-secondary">3.702 Toplam</span>
+          </div>
+          <div class="flex items-center space-x-4">
+            <div class="relative">
+              <select
+                class="bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark text-text-light-secondary dark:text-text-dark-secondary text-sm rounded-lg focus:ring-primary focus:border-primary block w-full pl-4 pr-10 py-2.5 appearance-none">
+                <option selected="">Yaratılma tarihi</option>
+                <option>Option 2</option>
+              </select>
+              <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                <span class="material-icons-outlined">expand_more</span>
+              </div>
+            </div>
+            <div class="relative">
+              <input
+                class="w-64 bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark text-text-light-primary dark:text-text-dark-primary text-sm rounded-lg focus:ring-primary focus:border-primary block pl-4 pr-10 py-2.5"
+                placeholder="Kullanıcıyı bul..." type="text" />
+              <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                <span
+                  class="material-icons-outlined text-text-light-secondary dark:text-text-dark-secondary">search</span>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="bg-card-light dark:bg-card-dark rounded-lg overflow-hidden">
+          <table class="w-full text-sm text-left text-text-light-primary dark:text-text-dark-primary">
+            <thead
+              class="text-xs uppercase text-text-light-secondary dark:text-text-dark-secondary bg-background-light dark:bg-zinc-800">
+              <tr>
+                <th class="py-3 px-6 font-medium" scope="col">ID</th>
+                <th class="py-3 px-6 font-medium" scope="col">TEMEL BİLGİLER</th>
+                <th class="py-3 px-6 font-medium" scope="col">KULLANICI ADI</th>
+                <th class="py-3 px-6 font-medium" scope="col">FİYATLANDIRMA PLANI</th>
+                <th class="py-3 px-6 font-medium" scope="col">YORUMLAR</th>
+                <th class="py-3 px-6 font-medium" scope="col">İNCELEMELER</th>
+                <th class="py-3 px-6 font-medium" scope="col">DURUM</th>
+                <th class="py-3 px-6 font-medium" scope="col">YARATILIŞ TARİHİ</th>
+                <th class="py-3 px-6 font-medium" scope="col">EYLEMLER</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-border-light dark:border-border-dark">
+                <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">11</td>
+                <td class="py-4 px-6 flex items-center space-x-3">
+                  <div
+                    class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center shrink-0">
+                    <span
+                      class="material-icons-outlined text-text-light-secondary dark:text-dark-secondary !text-2xl">person</span>
+                  </div>
+                  <div>
+                    <p class="font-medium text-text-light-primary dark:text-text-dark-primary">Tess Harper</p>
+                    <p class="text-xs text-text-light-secondary dark:text-text-dark-secondary">e-posta@e-posta.com</p>
+                  </div>
+                </td>
+                <td class="py-4 px-6">Kullanıcı adı</td>
+                <td class="py-4 px-6">Premium</td>
+                <td class="py-4 px-6">13</td>
+                <td class="py-4 px-6">1</td>
+                <td class="py-4 px-6"><span class="text-green-500">Onaylı</span></td>
+                <td class="py-4 px-6">05.02.2023</td>
+                <td class="py-4 px-6">
+                  <div class="flex items-center space-x-2 text-text-light-secondary dark:text-text-dark-secondary">
+                    <button class="hover:text-primary"><span class="material-icons-outlined">lock</span></button>
+                    <button class="hover:text-primary"><span class="material-icons-outlined">visibility</span></button>
+                    <button class="hover:text-primary"><span class="material-icons-outlined">edit</span></button>
+                    <button class="hover:text-red-500"><span class="material-icons-outlined">delete</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="border-b border-border-light dark:border-border-dark">
+                <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">12</td>
+                <td class="py-4 px-6 flex items-center space-x-3">
+                  <div
+                    class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center shrink-0">
+                    <span
+                      class="material-icons-outlined text-text-light-secondary dark:text-dark-secondary !text-2xl">person</span>
+                  </div>
+                  <div>
+                    <p class="font-medium text-text-light-primary dark:text-text-dark-primary">Gene Graham</p>
+                    <p class="text-xs text-text-light-secondary dark:text-text-dark-secondary">e-posta@e-posta.com</p>
+                  </div>
+                </td>
+                <td class="py-4 px-6">Kullanıcı adı</td>
+                <td class="py-4 px-6">Özgür</td>
+                <td class="py-4 px-6">1</td>
+                <td class="py-4 px-6">15</td>
+                <td class="py-4 px-6"><span class="text-green-500">Onaylı</span></td>
+                <td class="py-4 px-6">05.02.2023</td>
+                <td class="py-4 px-6">
+                  <div class="flex items-center space-x-2 text-text-light-secondary dark:text-text-dark-secondary">
+                    <button class="hover:text-primary"><span class="material-icons-outlined">lock</span></button>
+                    <button class="hover:text-primary"><span class="material-icons-outlined">visibility</span></button>
+                    <button class="hover:text-primary"><span class="material-icons-outlined">edit</span></button>
+                    <button class="hover:text-red-500"><span class="material-icons-outlined">delete</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="border-b border-border-light dark:border-border-dark">
+                <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">13</td>
+                <td class="py-4 px-6 flex items-center space-x-3">
+                  <div
+                    class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center shrink-0">
+                    <span
+                      class="material-icons-outlined text-text-light-secondary dark:text-dark-secondary !text-2xl">person</span>
+                  </div>
+                  <div>
+                    <p class="font-medium text-text-light-primary dark:text-text-dark-primary">Rosa Lee</p>
+                    <p class="text-xs text-text-light-secondary dark:text-text-dark-secondary">e-posta@e-posta.com</p>
+                  </div>
+                </td>
+                <td class="py-4 px-6">Kullanıcı adı</td>
+                <td class="py-4 px-6">Premium</td>
+                <td class="py-4 px-6">6</td>
+                <td class="py-4 px-6">6</td>
+                <td class="py-4 px-6"><span class="text-green-500">Onaylı</span></td>
+                <td class="py-4 px-6">04.02.2023</td>
+                <td class="py-4 px-6">
+                  <div class="flex items-center space-x-2 text-text-light-secondary dark:text-text-dark-secondary">
+                    <button class="hover:text-primary"><span class="material-icons-outlined">lock</span></button>
+                    <button class="hover:text-primary"><span class="material-icons-outlined">visibility</span></button>
+                    <button class="hover:text-primary"><span class="material-icons-outlined">edit</span></button>
+                    <button class="hover:text-red-500"><span class="material-icons-outlined">delete</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="border-b border-border-light dark:border-border-dark">
+                <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">14</td>
+                <td class="py-4 px-6 flex items-center space-x-3">
+                  <div
+                    class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center shrink-0">
+                    <span
+                      class="material-icons-outlined text-text-light-secondary dark:text-dark-secondary !text-2xl">person</span>
+                  </div>
+                  <div>
+                    <p class="font-medium text-text-light-primary dark:text-text-dark-primary">Matt Jones</p>
+                    <p class="text-xs text-text-light-secondary dark:text-text-dark-secondary">e-posta@e-posta.com</p>
+                  </div>
+                </td>
+                <td class="py-4 px-6">Kullanıcı adı</td>
+                <td class="py-4 px-6">Özgür</td>
+                <td class="py-4 px-6">11</td>
+                <td class="py-4 px-6">15</td>
+                <td class="py-4 px-6"><span class="text-red-500">Yasaklandı</span></td>
+                <td class="py-4 px-6">04.02.2023</td>
+                <td class="py-4 px-6">
+                  <div class="flex items-center space-x-2 text-text-light-secondary dark:text-text-dark-secondary">
+                    <button class="hover:text-primary"><span class="material-icons-outlined">lock_open</span></button>
+                    <button class="hover:text-primary"><span class="material-icons-outlined">visibility</span></button>
+                    <button class="hover:text-primary"><span class="material-icons-outlined">edit</span></button>
+                    <button class="hover:text-red-500"><span class="material-icons-outlined">delete</span></button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="border-b border-border-light dark:border-border-dark">
+                <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">15</td>
+                <td class="py-4 px-6 flex items-center space-x-3">
+                  <div
+                    class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center shrink-0">
+                    <span
+                      class="material-icons-outlined text-text-light-secondary dark:text-dark-secondary !text-2xl">person</span>
+                  </div>
+                  <div>
+                    <p class="font-medium text-text-light-primary dark:text-text-dark-primary">Brian Cranston</p>
+                    <p class="text-xs text-text-light-secondary dark:text-text-dark-secondary">e-posta@e-posta.com</p>
+                  </div>
+                </td>
+                <td class="py-4 px-6">Kullanıcı adı</td>
+                <td class="py-4 px-6">Temel</td>
+                <td class="py-4 px-6">0</td>
+                <td class="py-4 px-6">0</td>
+                <td class="py-4 px-6"><span class="text-green-500">Onaylı</span></td>
+                <td class="py-4 px-6">04.02.2023</td>
+                <td class="py-4 px-6">
+                  <div class="flex items-center space-x-2 text-text-light-secondary dark:text-text-dark-secondary">
+                    <button class="hover:text-primary"><span class="material-icons-outlined">lock</span></button>
+                    <button class="hover:text-primary"><span class="material-icons-outlined">visibility</span></button>
+                    <button class="hover:text-primary"><span class="material-icons-outlined">edit</span></button>
+                    <button class="hover:text-red-500"><span class="material-icons-outlined">delete</span></button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="flex justify-between items-center mt-6">
+          <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">3702'den 10'u gösteriliyor</p>
+          <nav class="flex items-center space-x-1">
+            <a class="px-3 py-1.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary"
+              href="#">
+              <span class="material-icons-outlined">chevron_left</span>
+            </a>
+            <a class="px-3 py-1.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary"
+              href="#">1</a>
+            <a class="px-3 py-1.5 rounded-lg text-white bg-primary" href="#">2</a>
+            <a class="px-3 py-1.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary"
+              href="#">3</a>
+            <a class="px-3 py-1.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary"
+              href="#">4</a>
+            <span class="px-3 py-1.5 text-text-light-secondary dark:text-text-dark-secondary">...</span>
+            <a class="px-3 py-1.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary"
+              href="#">29</a>
+            <a class="px-3 py-1.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary"
+              href="#">30</a>
+            <a class="px-3 py-1.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary"
+              href="#">
+              <span class="material-icons-outlined">chevron_right</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

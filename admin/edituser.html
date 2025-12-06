@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>FlixGo - Kullanıcı Düzenle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#e6005c",
+            "background-light": "#f1f5f9",
+            "background-dark": "#1a1a1a",
+            "card-light": "#ffffff",
+            "card-dark": "#262626",
+            "text-light-primary": "#1a1a1a",
+            "text-dark-primary": "#ffffff",
+            "text-light-secondary": "#6b7280",
+            "text-dark-secondary": "#a1a1aa",
+            "border-light": "#e5e7eb",
+            "border-dark": "#3f3f46",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .material-icons-outlined {
+      font-size: inherit;
+    }
+
+    /* Custom form styles */
+    .custom-select {
+      background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA-aYZf2c8yQYciPh-2FYDOKQA6EEVm9Z2bGPxn_LzoWe3x6JPLlToGNKkpDlz2xqwMG58lYZg7hL6VDYqrI9HVjCEG1l8HXPodoP07PRYWEznva6jHSKrdbXb_FLtwJEukCRs1sIkCqoNW2pfRmJ7BR9GbN2uD3cdqcZRe65we-i4DqQfVulD4T15YxannAZGVIxi4FZxAxYJ8lzq2L-ppJPWfgL0ZjSFlP-zPmvohOtOaTdrCg_sr4f5qN11gw7NLPTcIvjrwN2E);
+      background-position: right 0.5rem center;
+      background-repeat: no-repeat;
+      background-size: 1.5em 1.5em;
+      padding-right: 2.5rem;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark font-display text-text-light-primary dark:text-text-dark-primary">
+  <div class="flex h-screen">
+    <aside class="w-64 flex-shrink-0 bg-card-light dark:bg-card-dark flex flex-col">
+      <div class="h-20 flex items-center px-6">
+        <img src="../icon/LOGO.png" alt="Worthrate Logo" class="h-16">
+      </div>
+      <div class="px-6 py-4 border-y border-border-light dark:border-border-dark flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center">
+            <span
+              class="material-icons-outlined text-text-light-secondary dark:text-dark-secondary text-2xl">person</span>
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-text-light-primary dark:text-text-dark-primary">John Doe</p>
+            <p class="text-xs text-text-light-secondary dark:text-text-dark-secondary">Admin</p>
+          </div>
+        </div>
+        <button class="text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">
+          <span class="material-icons-outlined text-2xl">logout</span>
+        </button>
+      </div>
+      <nav class="flex-1 px-4 py-6 space-y-2">
+        <a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg"
+          href="index.html">
+          <span class="material-icons-outlined mr-3 text-lg">grid_view</span>
+          DASHBOARD
+        </a>
+        <a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg"
+          href="catalogAdmin.html">
+          <span class="material-icons-outlined mr-3 text-lg">movie</span>
+          CATALOG
+        </a>
+        <a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg"
+          href="kullanicilarAdmin.html">
+          <span class="material-icons-outlined mr-3 text-lg">people</span>
+          USERS
+        </a>
+        <a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg"
+          href="yorumlarAdmin.html">
+          <span class="material-icons-outlined mr-3 text-lg">chat_bubble_outline</span>
+          COMMENTS
+        </a>
+        <a class="flex items-center px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg"
+          href="reviewsAdmin.html">
+          <span class="material-icons-outlined mr-3 text-lg">star_border</span>
+          REVIEWS
+        </a>
+        <details class="group" open>
+          <summary
+            class="flex items-center justify-between px-4 py-2.5 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary hover:text-primary hover:bg-primary/10 rounded-lg cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+            <div class="flex items-center">
+              <span class="material-icons-outlined mr-3 text-lg">description</span>
+              PAGES
+            </div>
+            <span class="material-icons-outlined text-lg transition-transform group-open:rotate-180">expand_more</span>
+          </summary>
+          <ul class="mt-2 space-y-1 pl-11">
+            <li><a href="ogeekleme.html"
+                class="block py-2 text-sm text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">Öğe
+                Ekle</a></li>
+            <li><a href="editUser.html" class="block py-2 text-sm text-primary font-medium">Kullanıcıyı
+                Düzenle</a></li>
+            <li><a href="../signin.html"
+                class="block py-2 text-sm text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">Giriş
+                Yap</a></li>
+            <li><a href="../signup.html"
+                class="block py-2 text-sm text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">Kayıt
+                Ol</a></li>
+          </ul>
+        </details>
+      </nav>
+      <div class="px-6 py-4 text-xs text-text-light-secondary dark:text-text-dark-secondary">
+        <p>© FlixGo, 2018—2023.</p>
+        <p>Create by Dmitry Volkov.</p>
+      </div>
+    </aside>
+    <main class="flex-1 overflow-y-auto">
+      <div class="p-8">
+        <h2 class="text-3xl font-bold mb-6 text-text-light-primary dark:text-text-dark-primary">Kullanıcıyı düzenle</h2>
+        <div class="bg-card-light dark:bg-card-dark p-6 rounded-lg">
+          <div class="flex items-center justify-between border-b border-border-light dark:border-border-dark pb-6 mb-6">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
+                <span class="material-icons-outlined text-4xl text-primary">person</span>
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h3 class="text-lg font-bold text-text-light-primary dark:text-text-dark-primary">Kullanıcı Adı</h3>
+                  <span id="user-status-badge"
+                    class="bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full">(Onaylandı)</span>
+                </div>
+                <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Worthrate Kimliği: 23562</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="openModal('status-modal')"
+                class="p-2 rounded-md bg-green-500/10 dark:bg-green-500/20 text-green-500 hover:bg-green-500/20 dark:hover:bg-green-500/30 transition-colors">
+                <span class="material-icons-outlined">lock_open</span>
+              </button>
+              <button onclick="openModal('user-delete-modal')"
+                class="p-2 rounded-md bg-red-500/10 dark:bg-red-500/20 text-red-500 hover:bg-red-500/20 dark:hover:bg-red-500/30 transition-colors">
+                <span class="material-icons-outlined">delete_outline</span>
+              </button>
+            </div>
+          </div>
+          <div class="flex border-b border-border-light dark:border-border-dark mb-8">
+            <nav aria-label="Tabs" class="flex -mb-px space-x-8">
+              <button id="tab-profile" onclick="openTab('profile')"
+                class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-primary text-primary focus:outline-none">
+                PROFİL
+              </button>
+              <button id="tab-comments" onclick="openTab('comments')"
+                class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-transparent text-text-light-secondary dark:text-text-dark-secondary hover:text-text-light-primary dark:hover:text-text-dark-primary hover:border-border-light dark:hover:border-border-dark focus:outline-none">
+                YORUMLAR
+              </button>
+              <button id="tab-reviews" onclick="openTab('reviews')"
+                class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-transparent text-text-light-secondary dark:text-text-dark-secondary hover:text-text-light-primary dark:hover:text-text-dark-primary hover:border-border-light dark:hover:border-border-dark focus:outline-none">
+                İNCELEMELER
+              </button>
+            </nav>
+          </div>
+
+          <!-- Profile Content -->
+          <div id="profile-content" class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+            <div class="lg:col-span-3">
+              <h4 class="text-xl font-bold mb-6 text-text-light-primary dark:text-text-dark-primary">Profil detayları
+              </h4>
+              <form class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary mb-1"
+                      for="username">Giriş yapmak</label>
+                    <input
+                      class="w-full bg-background-light dark:bg-background-dark border-transparent rounded-md focus:ring-primary focus:border-primary text-text-light-primary dark:text-text-dark-primary"
+                      id="username" type="text" value="Kullanıcı 123" />
+                  </div>
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary mb-1"
+                      for="email">E-posta</label>
+                    <input
+                      class="w-full bg-background-light dark:bg-background-dark border-transparent rounded-md focus:ring-primary focus:border-primary text-text-light-primary dark:text-text-dark-primary"
+                      id="email" type="email" value="e-posta@e-posta.com" />
+                  </div>
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary mb-1"
+                      for="first-name">İlk adı</label>
+                    <input
+                      class="w-full bg-background-light dark:bg-background-dark border-transparent rounded-md focus:ring-primary focus:border-primary text-text-light-primary dark:text-text-dark-primary"
+                      id="first-name" type="text" value="John" />
+                  </div>
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary mb-1"
+                      for="last-name">Soy isim</label>
+                    <input
+                      class="w-full bg-background-light dark:bg-background-dark border-transparent rounded-md focus:ring-primary focus:border-primary text-text-light-primary dark:text-text-dark-primary"
+                      id="last-name" type="text" value="Dişi geyik" />
+                  </div>
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary mb-1"
+                      for="subscription">Abonelik</label>
+                    <select
+                      class="custom-select w-full bg-background-light dark:bg-background-dark border-transparent rounded-md focus:ring-primary focus:border-primary text-text-light-primary dark:text-text-dark-primary"
+                      id="subscription">
+                      <option>Temel</option>
+                      <option>Premium</option>
+                      <option>Kurumsal</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary mb-1"
+                      for="rights">Haklar</label>
+                    <select
+                      class="custom-select w-full bg-background-light dark:bg-background-dark border-transparent rounded-md focus:ring-primary focus:border-primary text-text-light-primary dark:text-text-dark-primary"
+                      id="rights">
+                      <option>Kullanıcı</option>
+                      <option>Moderatör</option>
+                      <option>Admin</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    class="w-full sm:w-auto px-10 py-3 bg-primary text-white font-bold rounded-md hover:opacity-90 transition-opacity"
+                    type="submit">
+                    KAYDETMEK
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="lg:col-span-2">
+              <h4 class="text-xl font-bold mb-6 text-text-light-primary dark:text-text-dark-primary">Şifre değiştir</h4>
+              <form class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary mb-1"
+                      for="old-password">eski Şifre</label>
+                    <input
+                      class="w-full bg-background-light dark:bg-background-dark border-transparent rounded-md focus:ring-primary focus:border-primary text-text-light-primary dark:text-text-dark-primary"
+                      id="old-password" type="password" />
+                  </div>
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary mb-1"
+                      for="new-password">Yeni Şifre</label>
+                    <input
+                      class="w-full bg-background-light dark:bg-background-dark border-transparent rounded-md focus:ring-primary focus:border-primary text-text-light-primary dark:text-text-dark-primary"
+                      id="new-password" type="password" />
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary mb-1"
+                    for="confirm-password">Yeni Şifreyi Onayla</label>
+                  <input
+                    class="w-full bg-background-light dark:bg-background-dark border-transparent rounded-md focus:ring-primary focus:border-primary text-text-light-primary dark:text-text-dark-primary"
+                    id="confirm-password" type="password" />
+                </div>
+                <div class="pt-24">
+                  <button
+                    class="w-full sm:w-auto px-10 py-3 bg-primary text-white font-bold rounded-md hover:opacity-90 transition-opacity"
+                    type="submit">
+                    DEĞİŞTİRMEK
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Comments Content -->
+          <div id="comments-content" class="hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm text-left text-text-light-primary dark:text-text-dark-primary">
+                <thead
+                  class="text-xs uppercase text-text-light-secondary dark:text-text-dark-secondary border-b border-border-light dark:border-border-dark">
+                  <tr>
+                    <th class="py-3 px-6 font-medium" scope="col">ID</th>
+                    <th class="py-3 px-6 font-medium" scope="col">ÖĞE</th>
+                    <th class="py-3 px-6 font-medium" scope="col">YAZAR</th>
+                    <th class="py-3 px-6 font-medium" scope="col">METİN</th>
+                    <th class="py-3 px-6 font-medium" scope="col">BEĞENİ / BEĞENME</th>
+                    <th class="py-3 px-6 font-medium" scope="col">YARATILIŞ TARİHİ</th>
+                    <th class="py-3 px-6 font-medium" scope="col">EYLEMLER</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="border-b border-border-light dark:border-border-dark hover:bg-background-light dark:hover:bg-card-dark/50 transition-colors">
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">11</td>
+                    <td class="py-4 px-6">Başka Bir Dilde Rüya Görüyorum</td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">Charlize Theron</td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">Ünlü bir arkeolog
+                      gittiğinde...</td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">12 / 7</td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">05.02.2023</td>
+                    <td class="py-4 px-6">
+                      <div class="flex space-x-2">
+                        <button onclick="openModal('view-modal')"
+                          class="p-2 rounded-md bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+                          <span class="material-icons-outlined text-lg">visibility</span>
+                        </button>
+                        <button onclick="openModal('delete-modal')"
+                          class="p-2 rounded-md bg-red-500/10 text-red-500 hover:bg-red-500/20 transition-colors">
+                          <span class="material-icons-outlined text-lg">delete</span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="border-b border-border-light dark:border-border-dark hover:bg-background-light dark:hover:bg-card-dark/50 transition-colors">
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">12</td>
+                    <td class="py-4 px-6">Unutulmuş Yol</td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">Tyreese Gibson</td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">Şanssız bir boksör
+                      mücadele ediyor...</td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">67 / 22</td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">05.02.2023</td>
+                    <td class="py-4 px-6">
+                      <div class="flex space-x-2">
+                        <button onclick="openModal('view-modal')"
+                          class="p-2 rounded-md bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+                          <span class="material-icons-outlined text-lg">visibility</span>
+                        </button>
+                        <button onclick="openModal('delete-modal')"
+                          class="p-2 rounded-md bg-red-500/10 text-red-500 hover:bg-red-500/20 transition-colors">
+                          <span class="material-icons-outlined text-lg">delete</span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- More rows can be added here -->
+                </tbody>
+              </table>
+            </div>
+            <div class="flex justify-between items-center mt-6">
+              <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">2356'dan 10'u gösteriliyor</p>
+              <nav class="flex items-center space-x-1">
+                <a class="px-3 py-1.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary"
+                  href="#">
+                  <span class="material-icons-outlined text-base align-middle">chevron_left</span>
+                </a>
+                <a class="px-3 py-1.5 rounded-lg text-white bg-primary" href="#">1</a>
+                <a class="px-3 py-1.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary"
+                  href="#">2</a>
+                <a class="px-3 py-1.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary"
+                  href="#">3</a>
+                <span class="px-3 py-1.5 text-text-light-secondary dark:text-text-dark-secondary">...</span>
+                <a class="px-3 py-1.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary"
+                  href="#">30</a>
+                <a class="px-3 py-1.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary"
+                  href="#">
+                  <span class="material-icons-outlined text-base align-middle">chevron_right</span>
+                </a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- Reviews Content -->
+          <div id="reviews-content" class="hidden">
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm text-left text-text-light-primary dark:text-text-dark-primary">
+                <thead
+                  class="text-xs uppercase text-text-light-secondary dark:text-text-dark-secondary border-b border-border-light dark:border-border-dark">
+                  <tr>
+                    <th class="py-3 px-6 font-medium" scope="col">ID</th>
+                    <th class="py-3 px-6 font-medium" scope="col">ÖĞE</th>
+                    <th class="py-3 px-6 font-medium" scope="col">YAZAR</th>
+                    <th class="py-3 px-6 font-medium" scope="col">METİN</th>
+                    <th class="py-3 px-6 font-medium" scope="col">DERECELENDİRME</th>
+                    <th class="py-3 px-6 font-medium" scope="col">BEĞENİ / BEĞENME</th>
+                    <th class="py-3 px-6 font-medium" scope="col">YARATILIŞ TARİHİ</th>
+                    <th class="py-3 px-6 font-medium" scope="col">EYLEMLER</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="border-b border-border-light dark:border-border-dark hover:bg-background-light dark:hover:bg-card-dark/50 transition-colors">
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">11</td>
+                    <td class="py-4 px-6">Başka Bir Dilde Rüya Görüyorum</td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">Gene Graham</td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">Babası ve sırları
+                      ortaya çıkarmak...</td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">
+                      <span class="flex items-center"><span
+                          class="material-icons-outlined text-primary text-base mr-1">star</span>7.9</span>
+                    </td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">12 / 7</td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">06.02.2023</td>
+                    <td class="py-4 px-6">
+                      <div class="flex space-x-2">
+                        <button onclick="openModal('view-modal')"
+                          class="p-2 rounded-md bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+                          <span class="material-icons-outlined text-lg">visibility</span>
+                        </button>
+                        <button onclick="openModal('edit-modal')"
+                          class="p-2 rounded-md bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+                          <span class="material-icons-outlined text-lg">edit</span>
+                        </button>
+                        <button onclick="openModal('delete-modal')"
+                          class="p-2 rounded-md bg-red-500/10 text-red-500 hover:bg-red-500/20 transition-colors">
+                          <span class="material-icons-outlined text-lg">delete</span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr
+                    class="border-b border-border-light dark:border-border-dark hover:bg-background-light dark:hover:bg-card-dark/50 transition-colors">
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">12</td>
+                    <td class="py-4 px-6">Unutulmuş Yol</td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">Tess Harper</td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">Kendi geçmişiyle
+                      yüzleşip onu kurtaracak...</td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">
+                      <span class="flex items-center"><span
+                          class="material-icons-outlined text-primary text-base mr-1">star</span>8.6</span>
+                    </td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">67 / 22</td>
+                    <td class="py-4 px-6 text-text-light-secondary dark:text-text-dark-secondary">06.02.2023</td>
+                    <td class="py-4 px-6">
+                      <div class="flex space-x-2">
+                        <button class="p-2 rounded-md bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+                          <span class="material-icons-outlined text-lg">visibility</span>
+                        </button>
+                        <button class="p-2 rounded-md bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+                          <span class="material-icons-outlined text-lg">edit</span>
+                        </button>
+                        <button class="p-2 rounded-md bg-red-500/10 text-red-500 hover:bg-red-500/20 transition-colors">
+                          <span class="material-icons-outlined text-lg">delete</span>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- More rows can be added here -->
+                </tbody>
+              </table>
+            </div>
+            <div class="flex justify-between items-center mt-6">
+              <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">9071'den 10'u gösteriliyor</p>
+              <nav class="flex items-center space-x-1">
+                <a class="px-3 py-1.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary"
+                  href="#">
+                  <span class="material-icons-outlined text-base align-middle">chevron_left</span>
+                </a>
+                <a class="px-3 py-1.5 rounded-lg text-white bg-primary" href="#">1</a>
+                <a class="px-3 py-1.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary"
+                  href="#">2</a>
+                <a class="px-3 py-1.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary"
+                  href="#">3</a>
+                <span class="px-3 py-1.5 text-text-light-secondary dark:text-text-dark-secondary">...</span>
+                <a class="px-3 py-1.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary"
+                  href="#">30</a>
+                <a class="px-3 py-1.5 rounded-lg text-text-light-secondary dark:text-text-dark-secondary hover:bg-primary/10 hover:text-primary"
+                  href="#">
+                  <span class="material-icons-outlined text-base align-middle">chevron_right</span>
+                </a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- View Modal -->
+          <div id="view-modal"
+            class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+            <div
+              class="relative w-full max-w-lg bg-card-light dark:bg-card-dark rounded-lg shadow-xl overflow-hidden border-t-4 border-primary">
+              <!-- Modal Header (Custom layout from screenshot) -->
+              <div class="p-6">
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center space-x-4">
+                    <div
+                      class="h-12 w-12 rounded-full bg-background-light dark:bg-background-dark flex items-center justify-center text-primary">
+                      <span class="material-icons-outlined text-3xl">account_circle</span>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold text-text-light-primary dark:text-text-dark-primary">Bana göre en iyi
+                        Marvel filmi</h3>
+                      <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary">24.08.2018, 17:53 John
+                        Doe tarafından</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center space-x-1 text-primary font-bold text-lg">
+                    <span class="material-icons-outlined">star</span>
+                    <span>8.4</span>
+                  </div>
+                </div>
+
+                <div class="mt-6">
+                  <p class="text-text-light-secondary dark:text-text-dark-secondary leading-relaxed">
+                    Lorem Ipsum pasajlarının birçok farklı versiyonu mevcuttur, ancak bunların çoğu bir şekilde
+                    değiştirilmiştir; mizah katılmış veya inandırıcılıktan uzak rastgele kelimeler eklenmiştir. Bir
+                    Lorem Ipsum pasajı kullanacaksanız, metnin ortasında utanç verici bir ifade gizlenmediğinden emin
+                    olmalısınız.
+                  </p>
+                </div>
+              </div>
+
+              <div class="bg-background-light dark:bg-background-dark px-6 py-4 flex justify-end">
+                <button onclick="closeModal('view-modal')"
+                  class="px-4 py-2 bg-primary text-white rounded hover:opacity-90">Kapat</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Edit Modal -->
+          <div id="edit-modal"
+            class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+            <div class="relative w-full max-w-lg bg-card-light dark:bg-card-dark rounded-lg shadow-xl p-6">
+              <h3 class="text-xl font-bold mb-4 text-text-light-primary dark:text-text-dark-primary">İncelemeyi Düzenle
+              </h3>
+              <form onsubmit="event.preventDefault(); closeModal('edit-modal');">
+                <div class="space-y-4">
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary mb-1">Başlık</label>
+                    <input type="text"
+                      class="w-full bg-background-light dark:bg-background-dark border-transparent rounded-md focus:ring-primary focus:border-primary text-text-light-primary dark:text-text-dark-primary"
+                      value="Bana göre en iyi Marvel filmi">
+                  </div>
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary mb-1">İnceleme
+                      Metni</label>
+                    <textarea rows="4"
+                      class="w-full bg-background-light dark:bg-background-dark border-transparent rounded-md focus:ring-primary focus:border-primary text-text-light-primary dark:text-text-dark-primary">Lorem Ipsum pasajlarının birçok farklı versiyonu mevcuttur...</textarea>
+                  </div>
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary mb-1">Puan</label>
+                    <input type="number" step="0.1" max="10" min="0"
+                      class="w-full bg-background-light dark:bg-background-dark border-transparent rounded-md focus:ring-primary focus:border-primary text-text-light-primary dark:text-text-dark-primary"
+                      value="8.4">
+                  </div>
+                </div>
+                <div class="flex justify-end space-x-3 mt-6">
+                  <button type="button" onclick="closeModal('edit-modal')"
+                    class="px-4 py-2 text-text-light-secondary dark:text-text-dark-secondary hover:text-text-light-primary dark:hover:text-text-dark-primary">İptal</button>
+                  <button type="submit" class="px-4 py-2 bg-primary text-white rounded hover:opacity-90">Kaydet</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Delete Modal -->
+          <div id="delete-modal"
+            class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+            <div class="relative w-full max-w-sm bg-card-light dark:bg-card-dark rounded-lg shadow-xl p-6 text-center">
+              <div
+                class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 dark:bg-red-900/30 mb-4">
+                <span class="material-icons-outlined text-red-600 dark:text-red-500 text-2xl">warning</span>
+              </div>
+              <h3 class="text-lg font-bold text-text-light-primary dark:text-text-dark-primary mb-2">Emin misiniz?</h3>
+              <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary mb-6">Bu incelemeyi silmek
+                üzeresiniz. Bu işlem geri alınamaz.</p>
+              <div class="flex justify-center space-x-3">
+                <button onclick="closeModal('delete-modal')"
+                  class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded hover:opacity-90">İptal</button>
+                <button onclick="closeModal('delete-modal')"
+                  class="px-4 py-2 bg-red-500 text-white rounded hover:opacity-90">Sil</button>
+              </div>
+            </div>
+          </div>
+          <!-- User Delete Modal -->
+          <div id="user-delete-modal"
+            class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+            <div class="relative w-full max-w-sm bg-card-light dark:bg-card-dark rounded-lg shadow-xl p-6 text-center">
+              <div
+                class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 dark:bg-red-900/30 mb-4">
+                <span class="material-icons-outlined text-red-600 dark:text-red-500 text-2xl">warning</span>
+              </div>
+              <h3 class="text-lg font-bold text-text-light-primary dark:text-text-dark-primary mb-2">Emin misiniz?</h3>
+              <p class="text-sm text-text-light-secondary dark:text-text-dark-secondary mb-6">Bu kullanıcıyı silmek
+                üzeresiniz. Bu işlem geri alınamaz.</p>
+              <div class="flex justify-center space-x-3">
+                <button onclick="closeModal('user-delete-modal')"
+                  class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded hover:opacity-90">İptal</button>
+                <button onclick="closeModal('user-delete-modal')"
+                  class="px-4 py-2 bg-red-500 text-white rounded hover:opacity-90">Sil</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Status Modal -->
+          <div id="status-modal"
+            class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+            <div class="relative w-full max-w-sm bg-card-light dark:bg-card-dark rounded-lg shadow-xl p-6">
+              <h3 class="text-xl font-bold mb-4 text-text-light-primary dark:text-text-dark-primary">Durumu Değiştir
+              </h3>
+              <form onsubmit="event.preventDefault(); saveStatus();">
+                <div class="space-y-3">
+                  <div class="flex items-center">
+                    <input id="status-unapproved" name="status" type="radio" value="unapproved"
+                      class="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="status-unapproved"
+                      class="ml-2 text-sm font-medium text-text-light-primary dark:text-text-dark-primary">Onaylanmadı</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="status-pending" name="status" type="radio" value="pending"
+                      class="w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 focus:ring-yellow-500 dark:focus:ring-yellow-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="status-pending"
+                      class="ml-2 text-sm font-medium text-text-light-primary dark:text-text-dark-primary">Beklemede</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="status-approved" name="status" type="radio" value="approved" checked
+                      class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="status-approved"
+                      class="ml-2 text-sm font-medium text-text-light-primary dark:text-text-dark-primary">Onaylandı</label>
+                  </div>
+                </div>
+                <div class="flex justify-end space-x-3 mt-6">
+                  <button type="button" onclick="closeModal('status-modal')"
+                    class="px-4 py-2 text-text-light-secondary dark:text-text-dark-secondary hover:text-text-light-primary dark:hover:text-text-dark-primary">İptal</button>
+                  <button type="submit" class="px-4 py-2 bg-primary text-white rounded hover:opacity-90">Kaydet</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <script>
+            function saveStatus() {
+              const status = document.querySelector('input[name="status"]:checked').value;
+              const badge = document.getElementById('user-status-badge');
+
+              if (status === 'unapproved') {
+                badge.className = 'bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300 text-xs font-medium px-2.5 py-0.5 rounded-full';
+                badge.textContent = '(Onaylanmadı)';
+              } else if (status === 'pending') {
+                badge.className = 'bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300 text-xs font-medium px-2.5 py-0.5 rounded-full';
+                badge.textContent = '(Beklemede)';
+              } else {
+                badge.className = 'bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full';
+                badge.textContent = '(Onaylandı)';
+              }
+              closeModal('status-modal');
+            }
+
+            function openModal(modalId) {
+              const modal = document.getElementById(modalId);
+              if (modal) {
+                modal.classList.remove('hidden');
+              }
+            }
+
+            function closeModal(modalId) {
+              const modal = document.getElementById(modalId);
+              if (modal) {
+                modal.classList.add('hidden');
+              }
+            }
+
+            // Close modal when clicking outside
+            window.onclick = function (event) {
+              if (event.target.classList.contains('fixed')) {
+                event.target.classList.add('hidden');
+              }
+            }
+
+            function openTab(tabName) {
+              // Hide all contents
+              const profileContent = document.getElementById('profile-content');
+              const commentsContent = document.getElementById('comments-content');
+              const reviewsContent = document.getElementById('reviews-content');
+
+              if (profileContent) profileContent.classList.add('hidden');
+              if (commentsContent) commentsContent.classList.add('hidden');
+              if (reviewsContent) reviewsContent.classList.add('hidden');
+
+              // Reset tab styles
+              const tabs = ['profile', 'comments', 'reviews'];
+              tabs.forEach(t => {
+                const tabElement = document.getElementById('tab-' + t);
+                if (tabElement) {
+                  tabElement.classList.remove('border-primary', 'text-primary');
+                  tabElement.classList.add('border-transparent', 'text-text-light-secondary', 'dark:text-text-dark-secondary');
+                }
+              });
+
+              // Show specific content
+              if (tabName === 'profile') {
+                if (profileContent) profileContent.classList.remove('hidden');
+              } else if (tabName === 'comments') {
+                if (commentsContent) commentsContent.classList.remove('hidden');
+              } else if (tabName === 'reviews') {
+                if (reviewsContent) reviewsContent.classList.remove('hidden');
+              }
+
+              // Highlight specific tab
+              const activeTab = document.getElementById('tab-' + tabName);
+              if (activeTab) {
+                activeTab.classList.remove('border-transparent', 'text-text-light-secondary',
+                  'dark:text-text-dark-secondary');
+                activeTab.classList.add('border-primary', 'text-primary');
+              }
+            }
+          </script>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
 	<meta charset="utf-8">
@@ -30,16 +30,178 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="Dmitry Volkov">
-	<title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
+	<title>Wortrate – Sıkça Sorulan Sorular</title>
 
 </head>
+<style>
+	/* Modal Styles */
+	.modal-overlay {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.8);
+		z-index: 1000;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.modal-content {
+		background: #2b2b31;
+		padding: 30px;
+		border-radius: 16px;
+		width: 90%;
+		max-width: 500px;
+		position: relative;
+		box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.3);
+	}
+
+	.modal-close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		background: transparent;
+		border: none;
+		color: #fff;
+		font-size: 24px;
+		cursor: pointer;
+	}
+
+	.modal-title {
+		color: #fff;
+		font-size: 24px;
+		margin-bottom: 20px;
+		font-weight: 500;
+		text-align: center;
+	}
+
+	.form-group {
+		margin-bottom: 20px;
+	}
+
+	.form-label {
+		display: block;
+		color: #fff;
+		margin-bottom: 5px;
+		font-size: 14px;
+	}
+
+	.form-input,
+	.form-textarea {
+		width: 100%;
+		background: #222227;
+		border: 1px solid transparent;
+		border-radius: 16px;
+		height: 44px;
+		color: #fff;
+		padding: 0 20px;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 14px;
+		transition: 0.4s;
+	}
+
+	.form-textarea {
+		height: 120px;
+		padding: 15px 20px;
+		resize: none;
+	}
+
+	.form-input:focus,
+	.form-textarea:focus {
+		border-color: #ff55a5;
+		background: #222227;
+	}
+
+	.form-btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 50px;
+		width: 100%;
+		border-radius: 16px;
+		background-image: -moz-linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+		background-image: -webkit-linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+		background-image: -ms-linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+		background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+		color: #fff;
+		font-size: 14px;
+		font-weight: 600;
+		text-transform: uppercase;
+		border: none;
+		cursor: pointer;
+		transition: 0.4s;
+	}
+
+	.form-btn:hover {
+		color: #fff;
+		background-image: -moz-linear-gradient(90deg, #ff5860 0%, #ff55a5 100%);
+		background-image: -webkit-linear-gradient(90deg, #ff5860 0%, #ff55a5 100%);
+		background-image: -ms-linear-gradient(90deg, #ff5860 0%, #ff55a5 100%);
+		background-image: linear-gradient(90deg, #ff5860 0%, #ff55a5 100%);
+	}
+
+	.suggestion-btn {
+		display: block;
+		margin: 40px auto 0;
+		width: 240px;
+		height: 60px;
+		border-radius: 8px;
+		background-image: -moz-linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+		background-image: -webkit-linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+		background-image: -ms-linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+		background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+		box-shadow: 0 0 20px 0 rgba(255, 85, 165, 0.5);
+		color: #fff;
+		font-size: 16px;
+		font-weight: 600;
+		text-transform: uppercase;
+		border: none;
+		cursor: pointer;
+		transition: 0.4s;
+		letter-spacing: 0.5px;
+	}
+
+	.suggestion-btn:hover {
+		color: #fff;
+		background-image: -moz-linear-gradient(90deg, #ff5860 0%, #ff55a5 100%);
+		background-image: -webkit-linear-gradient(90deg, #ff5860 0%, #ff55a5 100%);
+		background-image: -ms-linear-gradient(90deg, #ff5860 0%, #ff55a5 100%);
+		background-image: linear-gradient(90deg, #ff5860 0%, #ff55a5 100%);
+		box-shadow: 0 0 25px 0 rgba(255, 85, 165, 0.7);
+	}
+
+	.notification {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		background: #28a745;
+		color: white;
+		padding: 15px 25px;
+		border-radius: 8px;
+		z-index: 1100;
+		display: none;
+		animation: slideIn 0.5s ease-out;
+	}
+
+	@keyframes slideIn {
+		from {
+			transform: translateX(100%);
+		}
+
+		to {
+			transform: translateX(0);
+		}
+	}
+</style>
 
 <body class="body">
 
 	<!-- header -->
 	<header class="header">
 		<div class="header__wrap">
-			<div class="container">
+			<div class="container-fluid" style="padding: 0 11%;">
 				<div class="row">
 					<div class="col-12">
 						<div class="header__content">
@@ -55,11 +217,11 @@
 								<li class="header__nav-item">
 									<a class="dropdown-toggle header__nav-link" href="#" role="button"
 										id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true"
-										aria-expanded="false">Home</a>
+										aria-expanded="false">Anasayfa</a>
 
 									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
-										<li><a href="index.html">Home slideshow bg</a></li>
-										<li><a href="index2.html">Home static bg</a></li>
+										<li><a href="index.html">Anasayfa slayt arka</a></li>
+										<li><a href="index2.html">Anasayfa statik arka</a></li>
 									</ul>
 								</li>
 								<!-- end dropdown -->
@@ -68,25 +230,70 @@
 								<li class="header__nav-item">
 									<a class="dropdown-toggle header__nav-link" href="#" role="button"
 										id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true"
-										aria-expanded="false">Catalog</a>
+										aria-expanded="false">Katalog</a>
 
 									<ul class="dropdown-menu header__dropdown-menu"
 										aria-labelledby="dropdownMenuCatalog">
-										<li><a href="catalog1.html">Catalog Grid</a></li>
-										<li><a href="catalog2.html">Catalog List</a></li>
-										<li><a href="details1.html">Details Movie</a></li>
-										<li><a href="details2.html">Details TV Series</a></li>
+										<li><a href="catalog1.html">Katalog Izgara</a></li>
+										<li><a href="catalog2.html">Katalog Liste</a></li>
+										<li><a href="details1.html">Film Detayları</a></li>
+										<li><a href="details2.html">Dizi Detayları</a></li>
 									</ul>
 								</li>
 								<!-- end dropdown -->
 
 								<li class="header__nav-item">
-									<a href="pricing.html" class="header__nav-link">Pricing Plan</a>
+									<a href="pricing.html" class="header__nav-link">Fiyatlandırma</a>
 								</li>
 
+
+								<!-- Filmler -->
 								<li class="header__nav-item">
-									<a href="faq.html" class="header__nav-link header__nav-link--active">Help</a>
+									<a class="dropdown-toggle header__nav-link" href="#" role="button"
+										id="dropdownMenuMovies" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">Filmler</a>
+
+									<ul class="dropdown-menu header__dropdown-menu"
+										aria-labelledby="dropdownMenuMovies">
+										<li><a href="aksiyonCatalog.html">Aksiyon</a></li>
+										<li><a href="dramCatalog.html">Dram</a></li>
+										<li><a href="bilimkurguCatalog.html">Bilim Kurgu</a></li>
+										<li><a href="komediCatalog.html">Komedi</a></li>
+									</ul>
 								</li>
+
+								<!-- Diziler -->
+								<li class="header__nav-item">
+									<a class="dropdown-toggle header__nav-link" href="#" role="button"
+										id="dropdownMenuSeries" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">Diziler</a>
+
+									<ul class="dropdown-menu header__dropdown-menu"
+										aria-labelledby="dropdownMenuSeries">
+										<li><a href="catalog2Minidiziler.html">Mini Diziler</a></li>
+										<li><a href="catalog2Populerdiziler.html">Popüler Diziler</a></li>
+										<li><a href="catalog2YeniCikanlar.html">Yeni Çıkanlar</a></li>
+									</ul>
+								</li>
+
+								<!-- Listeler -->
+								<li class="header__nav-item">
+									<a class="dropdown-toggle header__nav-link" href="#" role="button"
+										id="dropdownMenuLists" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">Listeler</a>
+
+									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuLists">
+										<li><a href="#">Editörün Seçimi</a></li>
+										<li><a href="#">En Yüksek Puanlı Filmler</a></li>
+										<li><a href="#">En Çok İzlenenler</a></li>
+									</ul>
+								</li>
+
+
+
+
+
+
 
 								<!-- dropdown -->
 								<li class="dropdown header__nav-item">
@@ -95,10 +302,13 @@
 										aria-expanded="false"><i class="icon ion-ios-more"></i></a>
 
 									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-										<li><a href="about.html">About</a></li>
-										<li><a href="signin.html">Sign In</a></li>
-										<li><a href="signup.html">Sign Up</a></li>
-										<li><a href="404.html">404 Page</a></li>
+										<li><a href="about.html">Hakkında</a></li>
+										<li><a href="statistics.html">İstatistikler</a></li>
+										<li><a href="faq.html">Yardım & İletişim</a></li>
+										<li><a href="vizyonmisyon.html">Misyon–Vizyon</a></li>
+										<li><a href="signin.html">Giriş Yap</a></li>
+										<li><a href="signup.html">Kayıt Ol</a></li>
+										<li><a href="404.html">404 Sayfası</a></li>
 									</ul>
 								</li>
 								<!-- end dropdown -->
@@ -113,7 +323,7 @@
 
 								<a href="signin.html" class="header__sign-in">
 									<i class="icon ion-ios-log-in"></i>
-									<span>sign in</span>
+									<span>giriş yap</span>
 								</a>
 							</div>
 							<!-- end header auth -->
@@ -137,9 +347,9 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="header__search-content">
-							<input type="text" placeholder="Search for a movie, TV Series that you are looking for">
+							<input type="text" placeholder="Aradığınız film veya diziyi yazın...">
 
-							<button type="button">search</button>
+							<button type="button">ara</button>
 						</div>
 					</div>
 				</div>
@@ -156,13 +366,13 @@
 				<div class="col-12">
 					<div class="section__wrap">
 						<!-- section title -->
-						<h2 class="section__title">FAQ</h2>
+						<h2 class="section__title">Sıkça Sorulan Sorular</h2>
 						<!-- end section title -->
 
 						<!-- breadcrumb -->
 						<ul class="breadcrumb">
-							<li class="breadcrumb__item"><a href="#">Home</a></li>
-							<li class="breadcrumb__item breadcrumb__item--active">FAQ</li>
+							<li class="breadcrumb__item"><a href="index.html">Anasayfa</a></li>
+							<li class="breadcrumb__item breadcrumb__item--active">S.S.S.</li>
 						</ul>
 						<!-- end breadcrumb -->
 					</div>
@@ -178,75 +388,81 @@
 			<div class="row">
 				<div class="col-12 col-md-6">
 					<div class="faq">
-						<h3 class="faq__title">Why is a Video is not loading?</h3>
-						<p class="faq__text">All the Lorem Ipsum generators on the Internet tend to repeat predefined
-							chunks as necessary, making this the first true generator on the Internet.</p>
-						<p class="faq__text">Various versions have evolved over the years, sometimes by accident,
-							sometimes on purpose (injected humour and the like).</p>
+						<h3 class="faq__title">Video neden yüklenmiyor?</h3>
+						<p class="faq__text">İnternet bağlantınızı kontrol edin ve tarayıcınızı yenileyin. Sorun devam
+							ederse, lütfen reklam engelleyici eklentilerinizi devre dışı bırakmayı deneyin veya bizimle
+							iletişime geçin.</p>
+						<p class="faq__text">Sunucularımızda anlık yoğunluk yaşanıyor olabilir, lütfen birkaç dakika
+							sonra tekrar deneyin.</p>
 					</div>
 
 					<div class="faq">
-						<h3 class="faq__title">Why isn't there a HD version of this video?</h3>
-						<p class="faq__text">Many desktop publishing packages and web page editors now use Lorem Ipsum
-							as their default model text, and a search for 'lorem ipsum' will uncover many web sites
-							still in their infancy.</p>
+						<h3 class="faq__title">Bu videonun neden HD versiyonu yok?</h3>
+						<p class="faq__text">Bazı eski yapımlar veya telif hakları kısıtlamaları nedeniyle her zaman HD
+							versiyon sunamayabiliyoruz. Kütüphanemizi sürekli güncelleyerek en iyi kaliteyi sağlamaya
+							çalışıyoruz.</p>
 					</div>
 
 					<div class="faq">
-						<h3 class="faq__title">Why is the sound distorted?</h3>
-						<p class="faq__text">Various versions have evolved over the years, sometimes by accident,
-							sometimes on purpose (injected humour and the like).</p>
+						<h3 class="faq__title">Ses neden bozuk geliyor?</h3>
+						<p class="faq__text">Ses ayarlarınızı ve hoparlör bağlantılarınızı kontrol edin. Videoyu farklı
+							bir tarayıcıda veya cihazda açmayı deneyerek sorunun kaynağını belirleyebilirsiniz.</p>
 					</div>
 
 					<div class="faq">
-						<h3 class="faq__title">Why is the Video stuttering, buffering or randomly stopping?</h3>
-						<p class="faq__text">There are many variations of passages of Lorem Ipsum available, but the
-							majority have suffered alteration in some form, by injected humour, or randomised words
-							which don't look even slightly believable.</p>
+						<h3 class="faq__title">Video neden donuyor, takılıyor veya aniden duruyor?</h3>
+						<p class="faq__text">İnternet hızınız o anki video kalitesi için yetersiz olabilir. Video
+							kalitesini (örneğin 1080p'den 720p'ye) düşürmeyi veya modeminizi yeniden başlatmayı deneyin.
+						</p>
 					</div>
 
 					<div class="faq">
-						<h3 class="faq__title">When I change the quality of a video, nothing happens.</h3>
-						<p class="faq__text">If you are going to use a passage of Lorem Ipsum, you need to be sure there
-							isn't anything embarrassing hidden in the middle of text.</p>
+						<h3 class="faq__title">Video kalitesini değiştirdiğimde hiçbir şey olmuyor.</h3>
+						<p class="faq__text">Değişikliğin etkili olması için videonun bulunduğu noktadan itibaren tekrar
+							tamponlanması (buffering) gerekebilir. Lütfen değişikliği yaptıktan sonra birkaç saniye
+							bekleyin.</p>
 					</div>
 				</div>
 
 				<div class="col-12 col-md-6">
 					<div class="faq">
-						<h3 class="faq__title">Why isn't the video starting at the beginning?</h3>
-						<p class="faq__text">The point of using Lorem Ipsum is that it has a more-or-less normal
-							distribution of letters, as opposed to using 'Content here, content here', making it look
-							like readable English.</p>
+						<h3 class="faq__title">Video neden baştan başlamıyor?</h3>
+						<p class="faq__text">Sistemimiz üye girişi yaptıysanız izleme geçmişinizi hatırlar ve videoyu
+							kaldığınız yerden başlatır. Başa dönmek için video oynatıcının zaman çubuğunu en başa
+							sürükleyebilirsiniz.</p>
 					</div>
 
 					<div class="faq">
-						<h3 class="faq__title">How do I make the Video go Fullscreen?</h3>
-						<p class="faq__text">It uses a dictionary of over 200 Latin words, combined with a handful of
-							model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated
-							Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic
-							words etc.</p>
+						<h3 class="faq__title">Videoyu nasıl tam ekran yapabilirim?</h3>
+						<p class="faq__text">Video oynatıcının sağ alt köşesindeki "Tam Ekran" simgesine tıklayarak veya
+							videonun üzerine çift tıklayarak tam ekran moduna geçebilirsiniz. Çıkmak için "Esc" tuşuna
+							basabilirsiniz.</p>
 					</div>
 
 					<div class="faq">
-						<h3 class="faq__title">What Browsers are supported?</h3>
-						<p class="faq__text">It was popularised in the 1960s with the release of Letraset sheets
-							containing Lorem Ipsum passages, and more recently with desktop publishing software like
-							Aldus PageMaker including versions of Lorem Ipsum.</p>
+						<h3 class="faq__title">Hangi tarayıcılar destekleniyor?</h3>
+						<p class="faq__text">Google Chrome, Mozilla Firefox, Safari, Microsoft Edge ve Opera gibi güncel
+							web tarayıcılarının tamamını destekliyoruz. En iyi performans için tarayıcınızın güncel
+							olduğundan emin olun.</p>
 					</div>
 
 					<div class="faq">
-						<h3 class="faq__title">How do you handle my privacy?</h3>
-						<p class="faq__text">Various versions have evolved over the years, sometimes by accident,
-							sometimes on purpose (injected humour and the like).</p>
+						<h3 class="faq__title">Gizliliğimi nasıl koruyorsunuz?</h3>
+						<p class="faq__text">Kullanıcı verileriniz uluslararası güvenlik standartlarına uygun olarak
+							korunmaktadır. Kişisel bilgileriniz üçüncü şahıslarla paylaşılmaz. Detaylar için Gizlilik
+							Politikamızı inceleyebilirsiniz.</p>
 					</div>
 
 					<div class="faq">
-						<h3 class="faq__title">How can I contact you?</h3>
-						<p class="faq__text">The point of using Lorem Ipsum is that it has a more-or-less normal
-							distribution of letters, as opposed to using 'Content here, content here', making it look
-							like readable English.</p>
+						<h3 class="faq__title">Sizinle nasıl iletişime geçebilirim?</h3>
+						<p class="faq__text">İletişim sayfasındaki formu doldurabilir, sosyal medya hesaplarımızdan
+							yazabilir veya doğrudan <a
+								href="mailto:alibugraeroglu@gmail.com">alibugraeroglu@gmail.com</a>
+							adresine e-posta gönderebilirsiniz.</p>
 					</div>
+				</div>
+				<div class="col-12">
+					<button class="suggestion-btn" onclick="openModal()">Şikayet ve Öneri</button>
 				</div>
 			</div>
 		</div>
@@ -330,7 +546,84 @@
 	</footer>
 	<!-- end footer -->
 
+	<!-- Modal -->
+	<div id="complaintModal" class="modal-overlay">
+		<div class="modal-content">
+			<button class="modal-close" onclick="closeModal()">&times;</button>
+			<h3 class="modal-title">Şikayet ve Öneri</h3>
+			<form id="complaintForm" onsubmit="submitForm(event)">
+				<div class="form-group">
+					<label class="form-label">Ad Soyad</label>
+					<input type="text" class="form-input" required>
+				</div>
+				<div class="form-group">
+					<label class="form-label">E-posta adresi</label>
+					<input type="email" class="form-input" required>
+				</div>
+				<div class="form-group">
+					<label class="form-label">Kategori</label>
+					<select class="form-input" required>
+						<option value="" disabled selected>Seçiniz...</option>
+						<option value="sikayet">Şikayet</option>
+						<option value="oneri">Öneri</option>
+						<option value="hata">Hata Bildirimi</option>
+						<option value="diger">Diğer</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label class="form-label">Konu / Başlık</label>
+					<input type="text" class="form-input" required>
+				</div>
+				<div class="form-group">
+					<label class="form-label">Mesaj / İçerik</label>
+					<textarea class="form-textarea" required></textarea>
+				</div>
+				<div class="form-group">
+					<label class="form-label">Dosya Yükle</label>
+					<input type="file" class="form-input" style="padding-top: 10px;">
+				</div>
+				<button type="submit" class="form-btn">Gönder</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Notification -->
+	<div id="notification" class="notification">
+		Gönderildi
+	</div>
+
 	<!-- JS -->
+	<script>
+		function openModal() {
+			document.getElementById('complaintModal').style.display = 'flex';
+		}
+
+		function closeModal() {
+			document.getElementById('complaintModal').style.display = 'none';
+		}
+
+		function submitForm(event) {
+			event.preventDefault();
+
+			// Show notification
+			const notification = document.getElementById('notification');
+			notification.style.display = 'block';
+
+			// Close modal after delay
+			setTimeout(() => {
+				closeModal();
+				notification.style.display = 'none';
+				document.getElementById('complaintForm').reset();
+			}, 2000);
+		}
+
+		// Close modal when clicking outside
+		document.getElementById('complaintModal').addEventListener('click', function (e) {
+			if (e.target === this) {
+				closeModal();
+			}
+		});
+	</script>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>

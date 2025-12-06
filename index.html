@@ -116,9 +116,9 @@
 
 									<ul class="dropdown-menu header__dropdown-menu"
 										aria-labelledby="dropdownMenuSeries">
-										<li><a href="#">Mini Diziler</a></li>
-										<li><a href="#">Popüler Diziler</a></li>
-										<li><a href="#">Yeni Çıkanlar</a></li>
+										<li><a href="catalog2Minidiziler.html">Mini Diziler</a></li>
+										<li><a href="catalog2Populerdiziler.html">Popüler Diziler</a></li>
+										<li><a href="catalog2YeniCikanlar.html">Yeni Çıkanlar</a></li>
 									</ul>
 								</li>
 
@@ -149,9 +149,8 @@
 									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
 										<li><a href="about.html">Hakkında</a></li>
 										<li><a href="statistics.html">İstatistikler</a></li>
-										<li><a href="faq.html">Yardım</a></li>
-										<li><a href="#">İletişim</a></li>
-										<li><a href="#">Misyon–Vizyon</a></li>
+										<li><a href="faq.html">Yardım & İletişim</a></li>
+										<li><a href="vizyonmisyon.html">Misyon–Vizyon</a></li>
 										<li><a href="signin.html">Giriş Yap</a></li>
 										<li><a href="signup.html">Kayıt Ol</a></li>
 										<li><a href="404.html">404 Sayfası</a></li>
@@ -328,7 +327,7 @@
 				<div class="col-12 col-md-6">
 					<div class="row">
 						<div class="col-12">
-							<h2 class="content__title" style="margin-bottom: 20px;">Sayılarla FilmKutum</h2>
+							<h2 class="content__title" style="margin-bottom: 20px;">Sayılarla Worthrate</h2>
 						</div>
 
 						<div class="col-12">
@@ -448,9 +447,10 @@
 			theme: {
 				extend: {
 					colors: {
-						primary: "#E50914",
+						primary: "#ff55a5",
 						"background-light": "#F0F2F5",
-						"background-dark": "#141414",
+						"background-dark": "#2b2b31",
+						"card-dark": "#28282d",
 					},
 					fontFamily: {
 						display: ["Roboto", "sans-serif"],
@@ -471,149 +471,255 @@
 			scrollbar-width: none;
 		}
 	</style>
-	<section class="section dark">
-		<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-background-dark text-gray-100">
+	<section class="section bg-gradient-to-b from-[#2b2b31] via-red-900/40 to-[#2b2b31]">
+		<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 text-white">
 			<div class="mb-12">
-				<h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-6">Türkiye'de Bugünün Top 10 Dizi
+				<h2 class="text-2xl font-bold text-white mb-6" style="font-size: 2.4rem;">Türkiye'de Bugünün Top 10 Dizi
 					Listesi</h2>
 				<div class="relative group/list">
 					<button id="series-prev"
-						class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 hidden md:block opacity-0 group-hover/list:opacity-100 transition-opacity duration-300">
+						class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-primary/80 hover:bg-primary text-white rounded-full p-2 hidden md:block opacity-0 group-hover/list:opacity-100 transition-opacity duration-300 shadow-lg">
 						<span class="material-icons">chevron_left</span>
 					</button>
 					<button id="series-next"
-						class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 hidden md:block opacity-0 group-hover/list:opacity-100 transition-opacity duration-300">
+						class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-primary/80 hover:bg-primary text-white rounded-full p-2 hidden md:block opacity-0 group-hover/list:opacity-100 transition-opacity duration-300 shadow-lg">
 						<span class="material-icons">chevron_right</span>
 					</button>
 					<div id="series-list"
 						class="flex items-center space-x-4 overflow-x-auto pb-4 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 scrollbar-hide scroll-smooth">
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">1</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">1</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="Locke &amp; Key poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsPtTjTMZrEJOUaDgO4q9rXBlSE4veA_dxWvFJ54rZkq9IhU6khnd7ziNTeJ3IiKQ0a0FHVUPAb1Jvb8Irz8ojDHW7n03b3MUeIw-pXqtcUmL9v39GWylWRuUIdIrvzgA4FJYwYIa7374VVHYUovEQHV7vKMd-kHyd9PFiYau-fyoi2G2byI1UBrpTAOg079sdT8Krfvdw6ZeQd3msjf-ZqJZ3gowRyWKWR0SGdo0jfGyC1OH-1SgVYeIMzNZePScVmo1bgvig8Pg" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/cover.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">Locke & Key</a></h3>
+										<span class="card__category">
+											<a href="#">Gizem</a>
+											<a href="#">Dram</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>7.4</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">2</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">2</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="Ragnarok poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfQr8eXgEcwnhx4dd8pTpYkZ1KuELClgG17pgep0d4h1NUPP5Dqy_QWgZzdRPfaNBjDSWq4VcN6NLKVIChlRhnqfpezPQ8duUlJXNZByLG9-d9ZhnSozPhKiTAPjMsukt__q3ZzJqJo9NS6wNKCHl7xhO4i4ycSNZuWS0RDW2gpWWtdQou2s74dbnek0lQ3wnAG9N6tjphDvHJ9W5nFV52Jn86U1ry3lJw8QdrWQyAGH6KBI2ZZaFtTvsY6f5BT35WcOB3J7aHuSM" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/cover2.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">Ragnarok</a></h3>
+										<span class="card__category">
+											<a href="#">Fantastik</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>7.5</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">3</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">3</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="Bebekler poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuABdjFHXrkuT11LCqBRa_01LtzzMF3ZPY2hKnqppbfq5KYY0LkKor1S6Nq0z6WuQvyYqPfwOSNCLPYQxI3C1uuoGg17wYY41sB8WAXfdeOWnS-2mIpLwx6dLcEZ1l34CsvmEOooyJxRBpfUBNOC3j511Ff2lueuvi5xDNa0bMlklKIhENV49ADiDnm6EsS9jXo7A4h5GqwHnCweCPYHwRZEMBXF6qNEwYn376MSQAG1i0o_ieT2mbJ2OMTtRUhmzfisvhTvTY2ejdA" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/cover3.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">Bebekler</a></h3>
+										<span class="card__category">
+											<a href="#">Belgesel</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>8.0</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">4</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">4</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="Ottoman poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZuG0A2a05ExurNmVUw_qUjKemlS96nmX_nLDc_L_LNhsP0URcI9Mg5Ldji8R5z8S8K3H6SU37V7uIRQCGmPf_hVuiIs3GbKhWv5WQhvi0GuJEyQ2LTG7MEfrikAan53jCNR8XQzbg0RUQi749f3eZf9qrsmP_verFfxLDaDCF81my-EIUuIDvzP9CK2R_IFYOuPw-_yLtM5yXEZUQQT4XB7BR-_ect2kOSRIHssU8kyjodEn4lxvLt0g8NAV4FEGoA7RR-zEnZps" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/cover4.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">Ottoman</a></h3>
+										<span class="card__category">
+											<a href="#">Tarih</a>
+											<a href="#">Belgesel</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>7.9</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">5</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">5</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="Yakamoz S-245 poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu5IVwg5Fh0NAEq_luMtjsQUL3Ndut2XSgNp16-bV3-jR-A5cHrccHuD2SODnIRG4vlF3rzfvGhQQL-NBYL2wcf-Vc_ycnxMll7nX3pw368Mg_P1vS0a--UAhWpE7XfzviupylqOcWAvkBoFp_c9csvVTETfomAsFL609mhLuX5ZiLc5kNi_sqToRYmkcd_Od9e91c7mNvIxDZOP_hkJlfsm0hIEEEygKsSEwlaUPcW6AMkw8pW4k_GWpmlioELqxCWFMScqYRdHA" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/cover5.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">Yakamoz S-245</a></h3>
+										<span class="card__category">
+											<a href="#">Bilim Kurgu</a>
+											<a href="#">Macera</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>6.2</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">6</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">6</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="Sex Education poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWDS29BCbwY8xAArhm-wlTieU9ZMQ7IFH8jBTNSbnmxW2-5MV36ZB3mM1IjZ1OGUurf6Zkn37-bLBcznYik_DTM-Fyqa28_5Doy4v7JIAQ2H32vuLSzZm8eIpcYoWbgTvjnjQ9FBZNeshqnXZLYMju346VFV6zh4uJgKj-uqvnoDTVsRtpOv1nueCjO09bCXcvjIPb2ruYIvhMXLD_jqceVg0il32OGjuHpBpWhHhKQjITu9SYn15YduCC6KhoYC6Z9wLwGGFMp4A" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/cover6.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">Sex Education</a></h3>
+										<span class="card__category">
+											<a href="#">Komedi</a>
+											<a href="#">Dram</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>8.3</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">7</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">7</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="Narcos: Mexico poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpFpsefxIueT12WxACpRNxUdKdXTfvYopHScgHmal10rmBtNKqEV6MYrmb8bkB4cApsUS1Q0xhNHlzPKETPGFoMjynGeDHq94vO7KIBPpDDCjLhcmTXUGd5__QwOBb3hASovgybquTUsdpNh6CWX18cx0MatHwTA7r4-I04VjdabNwzms9ZAERpYx5n_OWHVgvdbrjxwlrOBd81oLTSF8Qv4S7DtdGEj2T9dkvZLYyF_Z8nLqpzTk6iR3DGN0Epwa_0YhKKwa9nVw" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/1.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">Narcos: Mexico</a></h3>
+										<span class="card__category">
+											<a href="#">Suç</a>
+											<a href="#">Dram</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">8</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">8</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="Messiah poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4DbB4oR3paY3vfjewxRXryKmInDh3lsIxSvfpUVuWlXC_cTqKU9hQb1qjQaqAqAkCSdt1MO6X3jeU-ZfiBtkkrre615Zjt3frG191hzs4OuhQmEtysEtrqTjz-6Vrc9dEW0b2hrCeepJywSp3qf65FThO-D_BhmTUaam7ZM0Exoq46iLfBoqVr9f27jzUwN2ATLfVPeFy0pUuw5xMgBW4gWpyngjixALDjyugiLz33Zxx2N6sP0RxLbixGdALe3Bq91LvI_9iNFw" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/2.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">Messiah</a></h3>
+										<span class="card__category">
+											<a href="#">Gerilim</a>
+											<a href="#">Dram</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>7.6</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">9</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">9</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="The Gift poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWqy4FEaNpYY_s2GDX0vw3tym71CScv-ep084tNdwSgzjFAqHTdXjWfec3kjspdTAEBgtRpfQVLyydLVpxWK4PpX-mtE0sDQAdVPj2dArhm-sgicMTQ7vi3zMKDHvQwAL4X_zBVTNEPclT7KNkrxs0gE0zBSnZ9Ch8S-nJBEX2Lkz1rNvQUhWlx4Wcd2BsZoyeFQhvsecBzNmUO3y9T7ttf_18g6ZXjTmiiPrRxtqIehrQRxRAMuc3l4eL0lmHz2SAqTs2Jf-xfKM" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/3.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">The Gift</a></h3>
+										<span class="card__category">
+											<a href="#">Gizem</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>7.3</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">10</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">10</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="The Stranger poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkzdp6bIBEILoe3607YDO_R5t5mMVWQXi0KEVuPiRKfLHh1_ddPJJ9uXo4oL5LXBKfLKmtwwLVAwjqGNy1HbzCc0NGT7llevh7hLRuj4sVyvxmPMJSz9D4PxYx6L840asFT05f3V9PqI4RZxyXHLH_rzzdcgBuWTUiMTF9fSAHMi_vKsRup1TxyFwmTgrnSCyuqLC_RO6AbDoYt7Qa-YCyCUeTassxU2o5qh3jNPIYSwhtoamxQhy9AvYh68bfzVWGxMmYhWqent4" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/4.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">The Stranger</a></h3>
+										<span class="card__category">
+											<a href="#">Gerilim</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>7.3</span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -621,153 +727,257 @@
 				</div>
 			</div>
 			<div>
-				<h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-6">Türkiye'de Bugünün Top 10 Film
+				<h2 class="text-2xl font-bold text-white mb-6" style="font-size: 2.4rem;">Türkiye'de Bugünün Top 10 Film
 					Listesi</h2>
 				<div class="relative group/list">
 					<button id="movies-prev"
-						class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 hidden md:block opacity-0 group-hover/list:opacity-100 transition-opacity duration-300">
+						class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-primary/80 hover:bg-primary text-white rounded-full p-2 hidden md:block opacity-0 group-hover/list:opacity-100 transition-opacity duration-300 shadow-lg">
 						<span class="material-icons">chevron_left</span>
 					</button>
 					<button id="movies-next"
-						class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 hidden md:block opacity-0 group-hover/list:opacity-100 transition-opacity duration-300">
+						class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-primary/80 hover:bg-primary text-white rounded-full p-2 hidden md:block opacity-0 group-hover/list:opacity-100 transition-opacity duration-300 shadow-lg">
 						<span class="material-icons">chevron_right</span>
 					</button>
 					<div id="movies-list"
 						class="flex items-center space-x-4 overflow-x-auto pb-4 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 scrollbar-hide scroll-smooth">
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">1</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">1</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="Kayhan poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmj0g9hLgNvMikxP9cT5l80KP5mqHM5_zvWVOvwN91xIleDFe8xpT0CUc8VA0yLbyZHfyvASc-3fwhq7NK2Go2atghRYbn-SPlvgs_V0rC2Xi2njaWSPwPa7iQX3jFv2JtDx2BY16EEleRVCHWqsLl8nryEAIhvjSHDl0gPBLjdWIqvZtoDnQl22E-nboj5M41Hu5VHssaUUgDkAkcRCHYK8rju4NcyPt85M0iOH5SD9Ze-R95g6s1dKxnZEXVuwVHdofrEZDSzfQ" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/5.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">Kayhan</a></h3>
+										<span class="card__category">
+											<a href="#">Komedi</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>5.9</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">2</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">2</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="The Last Thing He Wanted poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYr7IRs3eBeyFJ69Urav8Va-ASwNroBPwyqfTIX9R94tiG8nCa0ThnmiNajrvYbleGUNNL_0JQxfZgFu2EDTk83xcrX31KnzdhuSz8LlLJeaZbN4nFRY1ebQdzjQugd1u3FTDctshTXkpqYyGa2NiTRsKvv1a4MHQUdyDiMaxATFeySuFhYuy1AmHMgAcu3pV5KBJRNvm9ai_qlSU5JUo38blvNupVKu-NMo50mM5Dujdlz9xxW0pZHpW2Dbb8HZPbCkTwGbkw1UM" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/6.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">The Last Thing He Wanted</a>
+										</h3>
+										<span class="card__category">
+											<a href="#">Gerilim</a>
+											<a href="#">Dram</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>4.3</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">3</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">3</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="Annem poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmP1rnnNwG0sMgP9xRiTFonkOeYLyxAJCd2r3ybt6j-NGkCTjVqkRBXNmezO-JNPXT67H6t_K-41RjmOTIzipogTO2z3HdnuvKFzhX-StXm3jCwzxklGRQFJl94gi7PpKgoqLylLaxlG8H-TiU32n5lhBzK1rDgLwHafbZJGV9zNj8wxOWsqWhEPUFPsBTtbjH7xgKWKOxV_DyIN07G7FcgnwDa80sxwQgiRo4vfcQpUDS3C9lQh1IkRHhFc3HETwIlVlOWaRfAR0" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/cover.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">Annem</a></h3>
+										<span class="card__category">
+											<a href="#">Dram</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>6.5</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">4</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">4</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="Isi &amp; Ossi poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWZZvuH6HkyMiOSYiS8Gch9O1MVi36Qk9ScthftiSOrdKBDGakik6Kgh171YIZ1NcJJzNDviGsA7XQ8bzv63dsI1IliBer8Z8Qe60yz40-OS_KKbGAX4e3xxgyBvZyY_6FjKTpupC0QE8aSQUEUXjbWfz0wV9jCMNUAzW8WSk-8JKkyLn93FWMPop7S0XWaeCh1ahpTZ3vT9UkIqbJESZVznAUY6XZ6OcsuppwTTg7sswrsRbVcXBP8RKZ3mHITdQVRG4KhxVXhmg" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/cover2.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">Isi & Ossi</a></h3>
+										<span class="card__category">
+											<a href="#">Romantik</a>
+											<a href="#">Komedi</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>6.4</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">5</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">5</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="Recep Ivedik 5 poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHX16CTh52UT-Z-6RvrIX56tweKdVHndjgFvVGNz_jP20ppg0D6BBH5Rhq0DS3Z463MOZk7FHQx030bVnwZWCvHaV_LWbKB1xXhJSHczmjm_DtrC01TuntF520FNdEsRQmPk0QNk8zhSWAWaUH-JxKztlaAVPzg9oEPrLIZQZrrs1d3dMPdBmAtV8rSRAMVRCL0RkkiRQSCHEbBxAc92kGB9PA2eRhlV23tHq3DN3dtCcrr2ZQJOA252LMGKGERfZfrJEYeNoaTfA" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/cover3.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">Recep Ivedik 5</a></h3>
+										<span class="card__category">
+											<a href="#">Komedi</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>3.7</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">6</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">6</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="Osman Pazarlama poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQAzSK8bfcdDKR5IJvws3E0YUQxoNq_xuLAVV6qgQlwtU7CpOoaj-phqbQxPqr0m8JMk_2FBHxf7hYhbUCFtNvUKTkVvO3Ttb4EgHfGt4H0IFycIj4tnKo3hLUb_vaTCf2dewmWmCGn1sDW20sPkndOeXzNJ7MVv5x7wu0vHUt_oa9AEhVg_d05gt533d9EGzVMMp9NtdWAAwQg1f7Lhpmby5O0F0wXEj47vATpYGogGoI97B9kZ_fe9iR5O-kJ0GKLCKviq_--9Q" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/cover4.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">Osman Pazarlama</a></h3>
+										<span class="card__category">
+											<a href="#">Komedi</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>3.8</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">7</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">7</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="Assassin's Creed poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ805kpPG6aNwMrogSpgLiaiqH2PTX1z5vo-CN4oX1ffQYP5gKI_bG376Q6i2eWYeSmyDjO399cn6PyjBk21cQ8EZnJQo1B4O65_kSD6SfJdWDyTSrdp8r7RzI79QbDUbKKsouvcNo9tH-g139Fa1QCoxHtNZT4Lm4JawdAqVuoXY4z1XcBLGxbas8VxqGx1TPgzHjhU4YNfKYC2ZPh7-6hP3iZ0tSd2dRhrp3NSppZxEVkTJXtVQU58F4P2kXS4-f25XXdS7Q9xI" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/cover5.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">Assassin's Creed</a></h3>
+										<span class="card__category">
+											<a href="#">Aksiyon</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>5.7</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">8</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">8</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="Van Helsing poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfmY7DBnU2zDe1hHYAfY2rhFNYWxxyVCzMDFpKnZrL4lgPOTBttSlLNxDBUeylX-E2j0YrGvQeH287B2LjcZi89UxvrhbkxLd_wGvyKokJoW415_2AEoQwRdLJvOgNKDJjVYI-I_wK5AbIUWL1q0N4B6O0aowOkC_Q5eeRxPvG8XhGJ6m5ypigGGLu_KB4XlxBxKZh1CSvYnOVv_x-BuFPXuYiR4KmLCB7NzYU2ffjzl_cb1qNyYR7FbQxlLiX6wVbJYNWbyXjMfg" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/cover6.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">Van Helsing</a></h3>
+										<span class="card__category">
+											<a href="#">Aksiyon</a>
+											<a href="#">Fantastik</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>6.1</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">9</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">9</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="Tower Heist poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuARM93gjWj6b2TXj1O0HjngkD1sWioMk8h058SERwZ_gmv_jQ6OhGGZhhFYIvAhAD_yi-vXref0yip6N47odtsNhjmAZ-rRraduEPgby8jkQ-M8c3JcdPQxWL6-8qD3hlH3umURgqcnJmkcqdFmNfEIyOmsWHWd2GT1cAXmdSiLG0Zp9FbTjSzS7z2fo-UuxWXtmeuQLgTD-fbDyGMx8YkxS35u8HfW--Tkzc0mZUEE1mdh2dYzg9sfY-OTi323qIAlfPJcbxjNVgU" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/1.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">Tower Heist</a></h3>
+										<span class="card__category">
+											<a href="#">Aksiyon</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>6.2</span>
+									</div>
 								</div>
 							</div>
 						</div>
-						<div class="group relative flex-shrink-0 flex items-center">
+						<div class="group relative flex-shrink-0 flex items-start">
 							<span
-								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-gray-300 dark:text-gray-700/80 -mr-6 md:-mr-8 z-0">10</span>
+								class="text-8xl md:text-9xl lg:text-[10rem] font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-500 to-gray-800 stroke-2 -mr-6 md:-mr-8 z-0"
+								style="-webkit-text-stroke: 1px rgba(255,255,255,0.3);">10</span>
 							<div
-								class="relative rounded-md overflow-hidden z-10 w-32 md:w-40 lg:w-48 transition-transform duration-300 group-hover:scale-105">
-								<img alt="Aman Tanrim poster" class="w-full h-auto object-cover"
-									src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqhpMtzuTvFi4oxA3hJ_FYD1rGr4epU-vUQoq4mClKot38Tf5D9yZC7uXl1Bopo-1RiG8yEavKKqPd9duQWdlRziK_St2umJZRMfkS3QnDOo-l7SXzHp6ltkd9oX_DvkLyneVS-mnp8qgwRk-L120jh-TbUW-8ttw7s5Rm7Q3xYr65s65fxTOYPTRkJQrwxdb4L6JikXVKyeHC9DVypWWjjsfAgo7Be39AHV3FCnOWZ5g7PP8Ecjz5QlRA1KjCKEpTt3jtsyiDQD0" />
-								<div
-									class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-									<span class="material-icons text-white text-5xl">play_circle_filled</span>
+								class="min-w-[40%] sm:min-w-[30%] md:min-w-[24%] lg:min-w-[23%] z-10 mt-8 md:mt-10 pl-4">
+								<div class="card" style="margin-bottom: 0;">
+									<div class="card__cover">
+										<img src="img/covers/2.jpg" alt="">
+										<a href="details1.html" class="card__play">
+											<i class="icon ion-ios-play"></i>
+										</a>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title"><a href="details1.html">Aman Tanrim</a></h3>
+										<span class="card__category">
+											<a href="#">Komedi</a>
+											<a href="#">Fantastik</a>
+										</span>
+										<span class="card__rate"><i class="icon ion-ios-star"></i>6.8</span>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 		</div>
 	</section>
 
@@ -2223,7 +2433,7 @@
 					<p>Bu ay boyunca her akşam saat 21:00’de, seçili dizilerin yeni sezonlarını detaylı inceleyeceğimiz
 						özel bir maraton başlatıyoruz. Kullanıcılarımız da yorumlarıyla yayına katkı sağlayabilecek.</p>
 					<p><strong>Tarih:</strong> 1–30 Mart</p>
-					<p><strong>Platform:</strong> FilmKutum Canlı Yayın</p>
+					<p><strong>Platform:</strong> Worthrate Canlı Yayın</p>
 					<p class="mt-3">
 						<strong>Ek dökümanlar:</strong><br>
 						<a href="#" target="_blank" style="color: #ff55a5;">Program Akışı (PDF)</a><br>

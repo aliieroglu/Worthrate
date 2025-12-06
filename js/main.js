@@ -489,6 +489,7 @@ $(document).ready(function () {
 	$('.form__stars ion-icon').on('click', function () {
 		var value = $(this).data('value');
 		$('#form__rating').val(value);
+		$('#form__rating-value').text(value); // Update the rating display
 
 		$('.form__stars ion-icon').each(function () {
 			if ($(this).data('value') <= value) {
