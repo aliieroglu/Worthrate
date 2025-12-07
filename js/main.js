@@ -382,7 +382,7 @@ $(document).ready(function () {
 		}
 		return false;
 	}
-	$(window).on('load', initializePlayer());
+	$(window).on('load', initializePlayer);
 
 	/*==============================
 	Range sliders
