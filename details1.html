@@ -35,6 +35,20 @@
 	<meta name="author" content="Dmitry Volkov">
 	<title>FlixGo – Online Movies, TV Shows & Cinema HTML Template</title>
 
+	<style>
+		.details__bg {
+			opacity: 0.6 !important;
+			-webkit-mask-image: radial-gradient(ellipse at center top, black 20%, transparent 90%);
+			mask-image: radial-gradient(ellipse at center top, black 20%, transparent 100%);
+			background-size: cover !important;
+			background-position: center top !important;
+			background-repeat: no-repeat !important;
+		}
+
+		.details .container {
+			padding-top: 250px;
+		}
+	</style>
 </head>
 
 <body class="body">
@@ -197,7 +211,7 @@
 	<!-- details -->
 	<section class="section details">
 		<!-- details background -->
-		<div class="details__bg" data-bg="img/home/home__bg.jpg"></div>
+		<div class="details__bg" data-bg="img/home/shawshank-redemption.jpg"></div>
 		<!-- end details background -->
 
 		<!-- details content -->
@@ -694,8 +708,8 @@
 											</li>
 										</ul>
 
-										<form action="#"
-											class="form bg-gradient-to-br from-gray-900 via-gray-800/50 to-red-900 p-6 rounded-lg">
+										<form action="#" id="review-form" class="form p-6 rounded-lg"
+											style="background: radial-gradient(circle, rgba(160, 0, 0, 0.5) 0%, #2b2b31 100%);">
 											<input type="text" class="form__input" placeholder="Title">
 											<textarea class="form__textarea" placeholder="Review"></textarea>
 											<div class="form__rate">
@@ -1090,6 +1104,27 @@
 	<script src="js/main.js"></script>
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const form = document.getElementById('review-form');
+			if (form) {
+				form.addEventListener('mousemove', function (e) {
+					const rect = form.getBoundingClientRect();
+					const x = e.clientX - rect.left;
+					const y = e.clientY - rect.top;
+
+					form.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(160, 0, 0, 0.5) 0%, #2b2b31 100%)`;
+				});
+
+				form.addEventListener('mouseleave', function () {
+					// Reset to center or keep last position? User didn't specify, but centering is safe default behavior for "rest" state if needed, 
+					// but usually leaving it as last position or resetting to original look is fine.
+					// Let's reset to the initial static center look we had.
+					form.style.background = 'radial-gradient(circle, rgba(160, 0, 0, 0.5) 0%, #2b2b31 100%)';
+				});
+			}
+		});
+	</script>
 </body>
 
 </html>
