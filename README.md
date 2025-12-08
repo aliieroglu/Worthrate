@@ -1,4 +1,4 @@
-# Worthrate - Web Tasarım ve Geliştirme Detaylı Proje Raporu
+# Worthrate - Web Tasarım 
 
 **Ders:** Web Tasarımı ve Kodlama  
 **Hazırlayan:** Ali Buğra Eroğlu  
