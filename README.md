@@ -96,6 +96,20 @@ Sabit genişlik yerine yüzdelik (percentage-based) flexbox yapısı kuruldu. Mo
 Modal pencerelerin diğer öğelerin altında kalması sorunu, katman yönetimi (Layer Management) yeniden yapılandırılarak ve <code>z-index: 9999</code> atanarak çözüldü.
 </details>
 
+<details>
+<summary><b>🎬 Yönetmen Yorumu Kartının Tasarım Sorunu</b> (Tıklayın)</summary>
+<br>
+<strong>Zorluk:</strong> <code>details1.html</code> sayfasına film hakkında yönetmen yorumunu içeren yeni bir kart yapısı eklemek istedim. Ancak bu kart, sayfanın mevcut layout yapısına tam olarak oturmadı. Ne yaptıysam kartlar ya hizalamayı bozdu ya da sayfadaki diğer kartlarla çakışıp görünümü tamamen dağıttı. Özellikle flex yapısı ve margin/padding değerleri birbirine girince tasarım iyice kaydı.<br>
+<strong>Çözüm:</strong> Sorunu çözmek için kartın yer aldığı div yapısını tamamen yeniden düzenledim. Önce kart komponentini tek başına izole edip doğru çalıştığından emin oldum, ardından sayfa içindeki container yapısına uygun hale getirerek tekrar entegre ettim. Böylece hem hizalama sorunları giderildi hem de görsel düzen sağlandı.
+</details>
+
+<details>
+<summary><b>🖼️ Görsel Boyutlandırma ve Kapak Fotoğrafı Uyumluluk Sorunu</b> (Tıklayın)</summary>
+<br>
+<strong>Zorluk:</strong> Platformda kullanılacak film kapak görsellerinin, tasarımın bütünlüğünü koruması için 270×400 piksel boyutlarında olması gerekiyordu. Ancak bu ölçülere birebir uyan kapak fotoğraflarını bulmak zaman alıcı olmuştur. Logo tasarımı sırasında ise “The Shawshank Redemption (Esaretin Bedeli)” filmine ait poster referans alınmış olup, logo grafiğinin mevcut boyutları tasarım ile uyumsuzdur ve yeniden ölçeklendirme gerektirmiştir.<br>
+<strong>Çözüm:</strong> Logo, profesyonel bir fotoğraf düzenleme yazılımı kullanılarak yeniden ölçeklendirilmiş ve platforma uygun hale getirilmiştir. Film kapakları için farklı görsel kaynakları detaylı biçimde taranmış, uygun çözünürlükte ve oranlarda görseller manuel olarak seçilmiş ve şablon ile uyumlu hale getirilmiştir.
+</details>
+
 ---
 
 ## 🗺️ Yol Haritası
@@ -117,5 +131,5 @@ Gelecekte eklenmesi planlanan özellikler:
 ---
 
 <p align="center">
-  <sub>WorthRate © 2024 - Tüm Hakları Saklıdır.</sub>
+  <sub>WorthRate © 2025 - Tüm Hakları Saklıdır.</sub>
 </p>
