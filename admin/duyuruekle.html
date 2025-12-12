@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>WorthRate - Öğe Ekle Sayfası</title>
+  <title>WorthRate - Duyuru Ekle</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
@@ -144,10 +144,10 @@
             <span class="material-icons-outlined text-lg transition-transform group-open:rotate-180">expand_more</span>
           </summary>
           <ul class="mt-2 space-y-1 pl-11">
-            <li><a href="duyuruekle.html"
-                class="block py-2 text-sm text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">Duyuru
+            <li><a href="duyuruekle.html" class="block py-2 text-sm text-primary font-medium">Duyuru Ekle</a></li>
+            <li><a href="ogeekleme.html"
+                class="block py-2 text-sm text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">Öğe
                 Ekle</a></li>
-            <li><a href="ogeekleme.html" class="block py-2 text-sm text-primary font-medium">Öğe Ekle</a></li>
             <li><a href="editUser.html"
                 class="block py-2 text-sm text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">Kullanıcıyı
                 Düzenle</a></li>
@@ -167,105 +167,37 @@
     </aside>
     <main class="flex-1 overflow-y-auto">
       <div class="p-8">
-        <h1 class="text-3xl font-bold mb-6 text-text-light-primary dark:text-text-dark-primary">Yeni öğe ekle</h1>
+        <h1 class="text-3xl font-bold mb-6 text-text-light-primary dark:text-text-dark-primary">Duyuru Ekle</h1>
         <div class="bg-card-light dark:bg-card-dark p-8 rounded-lg shadow-sm">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="md:col-span-1">
-              <input class="w-full rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border"
-                placeholder="Başlık" type="text" />
-            </div>
-            <div class="grid grid-cols-2 gap-6">
-              <div class="relative">
-                <select
-                  class="w-full appearance-none rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border">
-                  <option>FullHD</option>
-                </select>
-                <span
-                  class="material-icons-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary pointer-events-none">expand_more</span>
-              </div>
-              <div>
-                <input class="w-full rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border"
-                  placeholder="Yaş" type="text" />
-              </div>
-            </div>
-            <div class="md:col-span-1">
-              <textarea class="w-full rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border"
-                placeholder="Açıklama" rows="5"></textarea>
-            </div>
-            <div class="grid grid-cols-2 gap-6">
-              <div class="relative">
-                <select
-                  class="w-full appearance-none rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border">
-                  <option>Tür seçiniz</option>
-                </select>
-                <span
-                  class="material-icons-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary pointer-events-none">expand_more</span>
-              </div>
-              <div>
-                <input class="w-full rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border"
-                  placeholder="Çalışma süresi" type="text" />
-              </div>
-              <div>
-                <input class="w-full rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border"
-                  placeholder="Prömiyer tarihi" type="text" />
-              </div>
-              <div class="relative">
-                <select
-                  class="w-full appearance-none rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border">
-                  <option>Ülke seçiniz</option>
-                </select>
-                <span
-                  class="material-icons-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary pointer-events-none">expand_more</span>
-              </div>
-            </div>
-            <div
-              class="relative border border-dashed border-border-light dark:border-border-dark rounded-lg p-3 flex items-center justify-between">
-              <span class="text-text-light-secondary dark:text-text-dark-secondary">Kapak yükle (240x340)</span>
-              <button class="text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">
-                <span class="material-icons-outlined">delete_outline</span>
-              </button>
-              <input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" type="file" />
-            </div>
+          <div class="grid grid-cols-1 gap-6">
             <div>
+              <label class="block text-sm font-medium text-text-light-primary dark:text-text-dark-primary mb-2">Duyuru
+                Başlığı</label>
               <input class="w-full rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border"
-                placeholder="Arka plan bağlantısı (1920x1280)" type="text" />
+                placeholder="Duyuru başlığını giriniz" type="text" />
             </div>
-            <div class="relative">
-              <select
-                class="w-full appearance-none rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border">
-                <option>Yönetmen seçiniz</option>
-              </select>
-              <span
-                class="material-icons-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary pointer-events-none">expand_more</span>
+
+            <div>
+              <label class="block text-sm font-medium text-text-light-primary dark:text-text-dark-primary mb-2">Duyuru
+                Açıklaması</label>
+              <textarea class="w-full rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border"
+                placeholder="Duyuru detaylarını buraya yazınız..." rows="6"></textarea>
             </div>
-            <div class="relative">
-              <select
-                class="w-full appearance-none rounded-lg p-3 form-input-custom focus:ring-primary focus:border-primary border">
-                <option>Oyuncuları seçiniz</option>
-              </select>
-              <span
-                class="material-icons-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary pointer-events-none">expand_more</span>
+
+            <div>
+              <label class="block text-sm font-medium text-text-light-primary dark:text-text-dark-primary mb-2">Dosya
+                Ekle</label>
+              <div
+                class="relative border border-dashed border-border-light dark:border-border-dark rounded-lg p-6 flex flex-col items-center justify-center text-center hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                <span
+                  class="material-icons-outlined text-4xl text-text-light-secondary dark:text-text-dark-secondary mb-2">cloud_upload</span>
+                <span class="text-sm text-text-light-secondary dark:text-text-dark-secondary">Dosyayı buraya sürükleyin
+                  veya seçin</span>
+                <input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" type="file" />
+              </div>
             </div>
-            <div class="md:col-span-2 flex items-center space-x-6">
-              <span class="text-text-light-primary dark:text-text-dark-primary">Öğe Türü:</span>
-              <label class="flex items-center space-x-2 cursor-pointer">
-                <input checked="" class="form-radio" name="item-type" type="radio" />
-                <span class="text-text-light-primary dark:text-text-dark-primary">Film</span>
-              </label>
-              <label class="flex items-center space-x-2 cursor-pointer">
-                <input class="form-radio" name="item-type" type="radio" />
-                <span class="text-text-light-primary dark:text-text-dark-primary">TV Dizisi</span>
-              </label>
-            </div>
-            <div
-              class="md:col-span-2 relative border border-dashed border-border-light dark:border-border-dark rounded-lg p-3 flex items-center justify-between">
-              <span class="text-text-light-secondary dark:text-text-dark-secondary">Video yükle</span>
-              <button class="text-text-light-secondary dark:text-text-dark-secondary hover:text-primary">
-                <span class="material-icons-outlined">movie_creation</span>
-              </button>
-              <input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" type="file" />
-            </div>
-            <div class="md:col-span-2">
+
+            <div class="flex justify-end mt-4">
               <button class="bg-primary text-white font-bold py-3 px-10 rounded-lg hover:opacity-90 transition-opacity">
                 YAYINLA
               </button>
