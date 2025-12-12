@@ -112,7 +112,7 @@ Gelecekte eklenmesi planlanan özellikler:
 
 | Rol | İsim | Ders | Tarih |
 |-----|------|------|-------|
-| **Geliştirici** | Ali Buğra Eroğlu | Web Tasarımı ve Kodlama | 7 Aralık 2024 |
+| **Geliştirici** | Ali Buğra Eroğlu | Web Tasarımı ve Kodlama | 7 Aralık 2025 |
 
 ---
 
