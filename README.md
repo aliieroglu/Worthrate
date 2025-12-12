@@ -25,6 +25,12 @@
 
 Mevcut bir HTML5 şablonu üzerine inşa edilen proje, **%80 oranında özelleştirilerek** tamamen özgün bir kimliğe kavuşturulmuştur.
 
+<p align="center">
+  <img src="img/readme/homepage.png" alt="WorthRate Ana Sayfa Görünümü" width="100%">
+  <br>
+  <em>Şekil 1: WorthRate Modern Ana Sayfa Tasarımı</em>
+</p>
+
 ---
 
 ## 🛠️ Teknolojiler ve Altyapı
@@ -49,10 +55,22 @@ Proje kapsamında geliştirilen ve platformu benzersiz kılan temel özellikler:
 - **Responsive Yapı:** Masaüstünde 4, mobilde akıcı kaydırma deneyimi sunan özel grid sistemi.
 - **Premium Atmosfer:** `Seamless` (kusursuz) geçişli kırmızı-siyah gradient arka plan.
 
+<p align="center">
+  <img src="img/readme/top10.png" alt="Top 10 Listesi Tasarımı" width="100%">
+  <br>
+  <em>Şekil 2: Özelleştirilmiş Top 10 Listesi ve Kart Yapısı</em>
+</p>
+
 ### 💬 Dinamik Etkileşim Formu
 - **Canlı Puanlama:** Kullanıcı tıklamasıyla anlık değişen yıldız puanı gösterimi (Örn: 8/10).
 - **Modern UI:** Yuvarlatılmış köşeler ve temaya uygun gradient arka plan.
 - **UX Odaklı:** Dikkat çekici butonlar ve iyileştirilmiş tipografi.
+
+<p align="center">
+  <img src="img/readme/review_form.png" alt="Yorum ve Puanlama Formu" width="80%">
+  <br>
+  <em>Şekil 3: Dinamik Puanlama ve Yorum Modülü</em>
+</p>
 
 ### 📢 Duyuru ve Güncelleme Sistemi
 - **Modal Yapısı:** Sayfa yenilenmeden açılan, şık popup pencereler.
@@ -61,6 +79,12 @@ Proje kapsamında geliştirilen ve platformu benzersiz kılan temel özellikler:
 ### 📊 İstatistikler ve Veri
 - **Sayılarla WorthRate:** Platformun doluluğunu gösteren modern sayaçlar.
 - **Yerelleştirme:** Türk izleyicisine özel içerikler (Gibi, Şahsiyet vb.) ve görseller.
+
+<p align="center">
+  <img src="img/readme/stats.png" alt="İstatistik ve Veri Alanı" width="100%">
+  <br>
+  <em>Şekil 4: İstatistik Bölümü ve Veri Görselleştirme</em>
+</p>
 
 ---
 
